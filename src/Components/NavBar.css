@@ -4,3 +4,39 @@
 .right{
     float: right;
 }
+.header{
+    background-color: blue;
+    margin-left: 100px;
+}
+.container-fluid{
+    background-color: #c6f4ff;
+    padding-left: 0px;
+    
+}
+.navbar navbar-expand-lg bg-body-tertiary,.navbar bg-dark border-bottom border-body{
+    background-color: red;
+    margin-left: 10px;
+}
+.navbar-toggler{
+    background-color: red;
+}
+.items,.image{
+    margin-right: 350px;
+}
+.image{
+    margin-left: 200px;
+}
+.nav-item{
+    margin-right: 50px;
+    color: blue;
+}
+.button{
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+    background-color: #c6f4ff;
+    margin-right: 9px;
+}
+.navbar-nav me-auto mb-2 mb-lg-0{
+    color: red;
+}
