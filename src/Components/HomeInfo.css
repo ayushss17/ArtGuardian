@@ -1,0 +1,47 @@
+@font-face {
+    font-family: head;
+    src: url(kort.ttf);
+}
+
+.container-fluid md-10{
+    background-color: #c6f4ff;
+
+    
+}
+.p-3 mb-2 bg-info text-white{
+    background-color: #c6f4ff;
+}
+.head{
+    color: #2e4e74;
+    font-size: 40px;
+    font-family:head;
+}
+.head1{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+.Main{
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-style:oblique;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Main,.container-xxl{
+    margin-top: 10px;
+}
+.head,.head1,.slogan{
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+.slogan{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-style: oblique;
+}
+.images{
+    float: right;
+    margin-top: 20px;
+}

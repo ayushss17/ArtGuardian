@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import './NavBar.css'
-import logo from './1.jpg'
+import logo from './art.png'
+import HomeInfo from './HomeInfo';
 
 <style>
 </style>
@@ -9,18 +10,22 @@ const NavBar = () => {
    
 
     return (
+     
         <div> 
-          <div className='header'>
+            <div className='header'>
           <header className='header_wrap fixed-top w-90 p-20'><nav className="navbar bg-dark border-bottom border-body" data-bs-theme="light"> 
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid p-50">
     <a className="navbar-brand" href="#">
-      <div className='image'>
-              <img src={logo} alt="Logo" width="30" height="24" className="d-inline-block align-text-top"/>
-     </div>
+     
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <div className='image'>
+        <img src={logo} alt="Logo" width="300" height="40" className="d-inline-block align-text-top" />
+        </div>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -53,7 +58,6 @@ const NavBar = () => {
   </nav>
         </header>
         </div>
-
         </div>
         
 )
