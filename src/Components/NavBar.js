@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import './NavBar.css'
-import logo from './art.png'
+import logo from '../Components/Images/art.png'
 import HomeInfo from './HomeInfo';
 
 <style>
@@ -27,7 +27,7 @@ const NavBar = () => {
         </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Products</a>
@@ -37,13 +37,11 @@ const NavBar = () => {
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Profile
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Buyer Profile</a></li>
+            <li><a class="dropdown-item" href="#">Seller Profile</a></li>
           </ul>
         </li>
         <li class="nav-item">

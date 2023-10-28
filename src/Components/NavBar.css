@@ -1,3 +1,15 @@
+@font-face {
+    font-family: NavItem;
+    src: url(../Components/Fonts/pophalf.ttf);
+}
+@keyframes float-in{
+    from {
+      transform: translateY(-5vh);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
 .style{
     background-color: #e3f2fd;
 }
@@ -21,18 +33,37 @@
     margin-right: 350px;
 }
 .nav-item{
+    animation: 2s linear 0s alternate float-in;
     margin-right: 50px;
     color: blue;
+    font-family: NavItem;
+    
+
 }
+.nav-item a:hover{
+
+    background: #2e4e74;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: 5px;
+}
+.button:hover{
+    background: #2e4e74;
+    color: white;
+}
+
 .button{
     border-radius: 10px;
     height: 50px;
     width: 150px;
     background-color: #c6f4ff;
     margin-right: 55px;
+    font-family: NavItem;
 }
 .image,.nav-item{
     margin-left: 10px;
     margin-right:50px;
     
 }
+

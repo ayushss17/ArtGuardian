@@ -1,12 +1,23 @@
 @font-face {
     font-family: head;
-    src: url(kort.ttf);
+    src: url(../Components/Fonts/kort.ttf);
+}
+@keyframes float{
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); } 
+}
+@keyframes typing{
+    from { width: 0 }
+    to { width: 30% }
+}
+@keyframes blink-cursor{
+    from, to { border-color: transparent }
+    10% { border-color: black; }
 }
 
 .container-fluid md-10{
-    background-color: #c6f4ff;
-
-    
+    background-color: #c6f4ff;    
 }
 .p-3 mb-2 bg-info text-white{
     background-color: #c6f4ff;
@@ -22,7 +33,12 @@
     color: white;
 }
 .Main{
+    animation-name: float;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
     font-size: 20px;
+    margin-top: 100px;
     margin-bottom: 50px;
     font-style:oblique;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -37,9 +53,17 @@
     margin-top: 10px;
 }
 .slogan{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
-    font-style: oblique;
+    text-align: center;
+    overflow: hidden; 
+    border-right: .15em solid   ;
+    white-space: nowrap; 
+    margin-right:510px;
+    margin-left: 470px; 
+    letter-spacing: .15em;
+    animation: typing 4.5s steps(40, end),blink-cursor .75s step-end infinite;
+    
 }
 .images{
     float: right;
