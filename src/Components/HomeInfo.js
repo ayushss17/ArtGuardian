@@ -7,7 +7,7 @@ import cat from '../Components/Images/catogories.png'
 const HomeInfo = () => {
   return (
     <div>
-      <div className='container-fluid md-10'>
+      <div className='container-fluid home'>
         <center>
         <br/><br/><br/>
         <h4 className='Main'>Welcome to ArtGuardian !</h4>

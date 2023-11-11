@@ -1,0 +1,44 @@
+@font-face {
+    font-family: whyhead;
+    src: url(../Components/Fonts/Aviatica.ttf);
+    font-family: imgtitle;
+    src: url(../Components/Fonts/pophalf.ttf);
+}
+.why{
+    background-color: #F8D49A;
+}
+.head-why{
+    text-align: center;
+    font-size: 40px;
+    font-family: whyhead;
+    margin-bottom: 100px;
+}
+.imgs{
+    margin-top: 100px;
+    margin-left: 150px;
+    height: 300px;
+    border-radius: 10px;
+
+}
+.imgtitle{
+    margin-left: 250px;
+    font-size: 30px;
+    font-family: imgtitle;
+}
+.sec,.user{
+    float: left;
+    margin-right: 90px;
+}
+.user{
+    margin-left: 200px;
+    margin-right: 260px;
+}
+
+.imgtitle-use{
+    text-align: center;
+    margin-right: 200px;
+}
+
+.imgs,.imgtitle{
+    margin-top: 10px;
+}

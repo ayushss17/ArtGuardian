@@ -1,11 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
 import './NavBar.css'
 import logo from '../Components/Images/art.png'
-import HomeInfo from './HomeInfo';
-
-<style>
-</style>
 const NavBar = () => {
    
 
@@ -15,7 +10,7 @@ const NavBar = () => {
             <div className='header'>
           <header className='header_wrap fixed-top w-90 p-20'><nav className="navbar bg-dark border-bottom border-body" data-bs-theme="light"> 
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid p-50">
+  <div class="container-fluid first">
     <a className="navbar-brand" href="#">
      
     </a>

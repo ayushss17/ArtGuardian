@@ -1,0 +1,20 @@
+@font-face {
+    font-family: abthead;
+    src: url(../Components/Fonts/Hansief.otf);
+    font-family: para;
+    src: url(../Components/Fonts/avenir.ttf);
+}
+.about{
+    background-color:#64C4C3 ;
+}
+.title{
+    margin-left: 100px;
+    font-size: 40px;
+    font-family: abthead;
+}
+.para{
+    margin-left:100px;
+    margin-right: 650px;
+    font-size: 18px;
+    font-family: para;
+}

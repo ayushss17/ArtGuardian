@@ -16,9 +16,10 @@
     10% { border-color: black; }
 }
 
-.container-fluid md-10{
-    background-color: #c6f4ff;    
+.home{
+    background-color: #5193b3;    
 }
+
 .p-3 mb-2 bg-info text-white{
     background-color: #c6f4ff;
 }
