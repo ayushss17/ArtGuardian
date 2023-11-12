@@ -5,9 +5,9 @@ import './HomeInfo.css';
 const About = () => {
   return (
     <div>
-        <div class="container-fluid about">
+        <div class="container-fluid  about">
         <div className='title'>
-            <br/>
+          <br/><br/><br/>
             Get To Know Us
         </div>
         <br/><br/>
@@ -17,7 +17,7 @@ const About = () => {
         In order to combat this problem, our Dapp aims to develop a holistic solution that merges cutting-edge seller authentication techniques with the power of blockchain technology, ensuring a secure and reliable environment for art transactions.
         <br/><br/>The official website for ArtGuardian is www.artguardian.io which can be viewed on the DApp browser for efficient transection of paintings. The process of transections between seller and buyer for painting is kept very simple.
         </div>
-        <br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
       </div>
     </div>
   )

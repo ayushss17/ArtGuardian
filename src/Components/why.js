@@ -8,7 +8,7 @@ const why = () => {
     <div>
       <div className='container-fluid why'>
        <div className='head-why'>
-        <br/>
+        <br/><br/>
         Why Choose US ?
         </div>
         <div className='imgtitle'>
@@ -19,6 +19,7 @@ const why = () => {
         <img src={secure} className='imgs'></img>
         <img src={userf} className='imgs'></img>
         <img src={multi} className='imgs'></img>
+        <br/><br/><br/><br/><br/><br/><br/>
       </div>
     </div>
   )

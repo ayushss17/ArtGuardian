@@ -36,10 +36,27 @@
     animation: 2s linear 0s alternate float-in;
     margin-right: 50px;
     color: blue;
-    font-family: NavItem;
-    
-
+    font-family: NavItem;   
 }
+
+   
+
+   
+main {
+    width: 100%;
+}
+section {
+    top: 2px;
+    left: 0;
+  }
+  section p {
+    margin: 0;
+    opacity: 0;
+    transition: all 0.6s ease-out;
+  }
+  section:target p {
+    opacity: 1;
+  }
 .nav-item a:hover{
 
     background: #2e4e74;

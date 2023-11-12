@@ -9,9 +9,9 @@ const HomeInfo = () => {
     <div>
       <div className='container-fluid home'>
         <center>
-        <br/><br/><br/>
+        <br/><br/><br/><br/><br/>
         <h4 className='Main'>Welcome to ArtGuardian !</h4>
-        <br/>
+        <br/><br/><br/>
         <img className="images"src={user} width='150'height='150'></img>
         <img className="images"src={cat} width='150'height='150'></img>
             <img className="images"src={Sell} width='150'height='150'></img>
@@ -24,8 +24,9 @@ const HomeInfo = () => {
             <br/><br/><br/>
             </center>
             <center>
+            <br/>
             <h4 className='slogan'>Let's Secure Art's Legacy Together with ArtGuardian !</h4>
-            <br/><br/>
+            <br/><br/><br/><br/><br/><br/>
         </center>
       </div>
     </div>

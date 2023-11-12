@@ -1,23 +1,44 @@
+
 @font-face {
     font-family: whyhead;
     src: url(../Components/Fonts/Aviatica.ttf);
     font-family: imgtitle;
     src: url(../Components/Fonts/pophalf.ttf);
 }
+@keyframes float-inwhy{
+    from {
+      transform: translateX(-5vh);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 .why{
     background-color: #F8D49A;
+    height: fit-content;
 }
 .head-why{
+    transition: all 0.6s ease-out;;
+    transition-duration: 3s;
     text-align: center;
     font-size: 40px;
     font-family: whyhead;
     margin-bottom: 100px;
 }
+.head-why p{
+    margin: 0;
+    opacity: 0;
+    
+}
+section:target p {
+    opacity: 1;
+  }
 .imgs{
     margin-top: 100px;
     margin-left: 150px;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 100px;
+    border-color: aqua;
 
 }
 .imgtitle{

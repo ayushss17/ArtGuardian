@@ -1,0 +1,65 @@
+.footer{
+    background-color: #005072;
+    background-image: url(../Components/Images/arts.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px;
+    height: fit-content;
+}
+.titles{
+    margin-left: 850px;
+    font-size: 18px;
+    color:black;
+}
+.lin-titl{
+    display: inline;
+    margin-left: 10px;
+    margin-bottom: 100px;
+}
+.title1{
+    margin-right: 90px;
+    writing-mode: vertical-rl;
+    margin-left: 100px;
+}
+.links{
+    margin-top: 80px;
+}
+.title2{
+    float: right;
+}
+.links{
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 50px;
+    writing-mode: horizontal-tb;
+}
+.header1{
+    width: 500px;
+    height: 50px;
+    margin-left: 500px;
+    margin-top: 200px;
+}
+.sub-titles{
+    margin-bottom: 50px;
+}
+a.sub-titles:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a.sub-titles:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a.sub-titles:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+a.sub-titles:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
