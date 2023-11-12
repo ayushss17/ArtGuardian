@@ -25,11 +25,15 @@ const NavBar = () => {
           <a class="nav-link" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link">Get To Know Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Why Choose US</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+       
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Profile
@@ -39,9 +43,7 @@ const NavBar = () => {
             <li><a class="dropdown-item" href="#">Seller Profile</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link">Get To Know Us</a>
-        </li>
+        
       </ul>
     </div>
   </div>
