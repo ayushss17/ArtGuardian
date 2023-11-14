@@ -62,4 +62,15 @@ a.sub-titles:active {
     background-color: transparent;
     text-decoration: underline;
 }
+@media screen and (max-width: 768px){
+    .container{
+      padding: 0 3.2rem
+    }
+    .titles{
+        margin-left: 0px;
+        font-size: 13px;
+        color:black;
+        margin-right: 100px;
+    }
+  }
 

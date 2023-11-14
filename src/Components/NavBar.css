@@ -10,38 +10,14 @@
       transform: translateY(0);
     }
   }
+  
 
-  .container {
-    display: flex;
-    flex-direction: row; /* or column */
-    justify-content: space-between; /* or other values */
-  }
-  
-  /* Or using CSS Grid */
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-.style{
-    background-color: #e3f2fd;
-}
 .right{
     float: right;
 }
-.header{
-    background-color: blue;
-    margin-left: 100px;
-    width: fit-content;
-}
 .first{
     background-color: #c6f4ff;
-    padding-left: 0px;
-    
-}
-.navbar navbar-expand-lg bg-body-tertiary,.navbar bg-dark border-bottom border-body{
-    background-color: red;
-    margin-left: 10px;
+    padding-left: 0px;   
 }
 .items{
     margin-right: 350px;
@@ -52,25 +28,6 @@
     color: blue;
     font-family: NavItem;   
 }
-
-   
-
-   
-main {
-    width: 100%;
-}
-section {
-    top: 2px;
-    left: 0;
-}
-section p {
-    margin: 0;
-    opacity: 0;
-    transition: all 0.6s ease-out;
-  }
-  section:target p {
-    opacity: 1;
-  }
 .nav-item a:hover{
 
     background: #2e4e74;
@@ -97,4 +54,51 @@ section p {
     margin-right:50px;
     
 }
+@media screen and (max-width: 768px){
+    .container{
+      padding: 0 3.2rem
+    }
+    .header{
+        background-color: blue;
+        margin-left: 100px;
+        width: 100px;
+    }
+    .image{
+        height: 20px;
+        width: 20px;
+    }
+    .button{
+        border-radius: 10px;
+        height: 30px;
+        width: 80px;
+        background-color: #c6f4ff;
+        margin-right: 5px;
+        font-family: NavItem;
+        font-size: 8px
+    }
+    .image,.nav-item{
+        margin-left: 1px;
+        margin-right:2px;
+        
+    }
+    .nav-item{
+        animation: 2s linear 0s alternate float-in;
+        margin-right: 10px;
+        color: blue;
+        font-family: NavItem;   
+        font-size: xx-large;
+    }
+    .items{
+        margin-right: 0px;
+    }
+    .first{
+        background-color: #c6f4ff;
+        margin-right: 0px;
+    }
+    .nav-item,.button{
+        margin-left: 0px;
+        margin-right: 0%;
+    }
+
+  }
 

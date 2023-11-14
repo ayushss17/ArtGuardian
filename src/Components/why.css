@@ -63,3 +63,25 @@ section:target p {
 .imgs,.imgtitle{
     margin-top: 10px;
 }
+@media screen and (max-width: 768px){
+    .head-why{
+        text-align: center;
+        font-size: 35px;
+        font-family: whyhead;
+        margin-bottom: 100px;
+    }
+    .imgs{
+        margin-top: 100px;
+        margin-left: 150px;
+        height: 300px;
+        border-radius: 100px;
+        border-color: aqua;
+    
+    }
+    .imgtitle{
+        margin-left: 250px;
+        font-size: 30px;
+        font-family: imgtitle;
+    }
+    
+  }

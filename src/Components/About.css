@@ -20,3 +20,21 @@
     font-size: 18px;
     font-family: para;
 }
+@media screen and (max-width: 768px){
+    .container{
+      padding: 0 3.2rem
+    }
+    .title{
+        margin-left: 15px;
+        font-size: 30px;
+        font-family: abthead;
+    }
+    .para{
+        margin-left:30px;
+        font-size: 14px;
+        margin-right: 1px;
+        font-family: para;
+        padding-bottom: 10px;
+    }
+
+  }

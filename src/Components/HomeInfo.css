@@ -70,3 +70,43 @@
     float: right;
     margin-top: 20px;
 }
+@media screen and (max-width: 768px){
+    .container{
+      padding: 0 3.2rem
+    }
+    .slogan{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px;
+        text-align: center;
+        overflow: hidden; 
+        border-right: .15em solid   ;
+        white-space: nowrap; 
+        margin-right:10px;
+        margin-left: 0px; 
+        letter-spacing: .15em;
+        animation: typing 4.5s steps(40, end),blink-cursor .75s step-end infinite;
+        padding: 0 3.2rem;
+    }
+    .head{
+        color: #2e4e74;
+        font-size: 35px;
+        font-family:head;
+        margin-left: 0%;
+    }
+    .head1{
+        font-size: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+        margin-left: 0;
+        margin-bottom: 0%;
+    }
+    .images{
+        float: right;
+        margin-top: 5px;
+        margin-bottom: 100px;
+        margin-right: 20px;
+        height: 10vh;
+        width: 10vh;
+    }
+
+  }

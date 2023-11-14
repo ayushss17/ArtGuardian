@@ -10,7 +10,7 @@ const NavBar = () => {
     return (
         <div> 
             <div className='header'>
-          <header className='header_wrap fixed-top w-90 p-20'><nav className="navbar bg-dark border-bottom border-body" data-bs-theme="light"> 
+          <header className='header_wrap fixed-top '><nav className="navbar bg-dark border-bottom border-body" data-bs-theme="light"> 
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid first">
     <a className="navbar-brand" href=''>
