@@ -79,13 +79,11 @@
         font-size: 10px;
         text-align: center;
         overflow: hidden; 
-        border-right: .15em solid   ;
-        white-space: nowrap; 
-        margin-right:10px;
-        margin-left: 0px; 
+        border-right: .15em solid ;
+        margin: 0px 20px 2px 5px;
         letter-spacing: .15em;
         animation: typing 4.5s steps(40, end),blink-cursor .75s step-end infinite;
-        padding: 0 3.2rem;
+        padding: 0 1%;
     }
     .head{
         color: #2e4e74;
@@ -102,11 +100,14 @@
     }
     .images{
         float: right;
-        margin-top: 5px;
-        margin-bottom: 100px;
-        margin-right: 20px;
+        margin-bottom: 70px;
+        margin: 5px 15px 70px 10px;
         height: 10vh;
-        width: 10vh;
+        width: 8vh;
+    }
+    .Main{
+        margin-bottom: 10px;
+        margin-top: 0px;
     }
 
   }

@@ -8,19 +8,18 @@ import Why from './why';
 import Footer from './footer';
 const NavBar = () => {
     return (
-        <div> 
+        <div className='navbar1'> 
             <div className='header'>
-          <header className='header_wrap fixed-top '><nav className="navbar bg-dark border-bottom border-body" data-bs-theme="light"> 
+          <header className='header_wrap fixed-top '><nav className="navbar bg-dark " data-bs-theme="light"> 
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            
   <div class="container-fluid first">
-    <a className="navbar-brand" href=''>
-     
-    </a>
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
         <div className='image'>
-        <img src={logo} alt="Logo" width="300" height="40" className="d-inline-block align-text-top" />
+        <img src={logo} alt="Logo" width="300" height="40" />
         </div>
         </li>
         <li class="nav-item">
@@ -35,8 +34,6 @@ const NavBar = () => {
         <li class="nav-item">
         <a class="nav-link" href='#Products'>Products</a>
         </li>
-       
-       
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href='#Profile' role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Profile
@@ -61,7 +58,8 @@ const NavBar = () => {
         <section id="Footer"><Footer/></section>
         </main>
         </div>
-        
+
+           
 )
 }
 

@@ -12,9 +12,11 @@
   }
   
 
-.right{
-    float: right;
-}
+
+
+  html,body{
+    overflow-x: hidden;
+  }
 .first{
     background-color: #c6f4ff;
     padding-left: 0px;   
@@ -33,13 +35,31 @@
     background: #2e4e74;
     color: white;
     border-radius: 10px;
-    height: 40px;
+    height: 35px;
     margin-top: 5px;
 }
 .button:hover{
     background: #2e4e74;
     color: white;
 }
+.nav-item a:checked{
+    background-color: antiquewhite;
+}
+.nav ul li a:active{
+    background-color: antiquewhite;
+
+}
+
+.navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=BFE100');
+  }
+.span{
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
 
 .button{
     border-radius: 10px;
@@ -55,15 +75,27 @@
     
 }
 @media screen and (max-width: 768px){
-    .container{
-      padding: 0 3.2rem
+    .navbar1 {
+        padding: 5px 5px;
+      }
+    
+      .navbar-nav {
+        flex-direction: column;
+      }
+    
+      .nav-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    .nav{
+        width: 100px;
     }
     .header{
         background-color: blue;
         margin-left: 100px;
         width: 100px;
     }
-    .image{
+    .container-fluid first,.image{
         height: 20px;
         width: 20px;
     }
@@ -72,7 +104,7 @@
         height: 30px;
         width: 80px;
         background-color: #c6f4ff;
-        margin-right: 5px;
+        margin-right: 100px;
         font-family: NavItem;
         font-size: 8px
     }

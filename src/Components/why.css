@@ -68,20 +68,16 @@ section:target p {
         text-align: center;
         font-size: 35px;
         font-family: whyhead;
-        margin-bottom: 100px;
+        margin-bottom: 10px;
     }
     .imgs{
-        margin-top: 100px;
-        margin-left: 150px;
-        height: 300px;
-        border-radius: 100px;
-        border-color: aqua;
-    
+        margin-top: 20px;
+        margin-left: 30px;
+        height: 250px;
+        width: 320px;
     }
     .imgtitle{
-        margin-left: 250px;
-        font-size: 30px;
-        font-family: imgtitle;
+        display: none;
     }
     
   }
