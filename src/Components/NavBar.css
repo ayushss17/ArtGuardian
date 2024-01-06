@@ -1,136 +1,133 @@
 @font-face {
-    font-family: NavItem;
-    src: url(../Components/Fonts/pophalf.ttf);
+font-family: NavItem;
+src: url(../Components/Fonts/pophalf.ttf);
 }
 @keyframes float-in{
-    from {
-      transform: translateY(-5vh);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
-  
-
-
-
-  html,body{
-    overflow-x: hidden;
-  }
-.first{
-    background-color: #c6f4ff;
-    padding-left: 0px;   
+from {
+transform: translateY(-5vh);
 }
-.items{
-    margin-right: 350px;
+to {
+transform: translateY(0);
 }
-.nav-item{
-    animation: 2s linear 0s alternate float-in;
-    margin-right: 50px;
-    color: blue;
-    font-family: NavItem;   
 }
-.nav-item a:hover{
+ 
+.active{
+    background-color: #2e4e74;
+}
+div .NavBar{
+display: flex;
+align-items: center;
+background-color: #c6f4ff;
+padding-right: 252px;     
+position: fixed;
+top: 0;
+}
+div .items{
+    padding-left: 0px;
+}
+div img{
+    margin-top: 10px;
+}
+header{
+display: flex;
+position: sticky;
+top: 0;
+}
+li{
+list-style: none;
+margin-left: 20px;
+padding-left: 20px;
+}
+.products{
+    margin-right: 40px;
+    margin-top: 10px;
+}
 
-    background: #2e4e74;
-    color: white;
+
+.items  li a{
+display: block;
+text-decoration: none;
+color: #f1f1f1;
+animation: 2s linear 0s alternate float-in;
+color: blue;
+font-family: NavItem; 
+
+}
+.NavBar ul{
+display: flex;
+}
+.dropdown-content a {
+color: black;
+padding: 5px 5px;
+text-decoration: none;
+display: block;
+text-align: left;
+animation: none;
+
+}
+.dropbtn a:hover{
+    color:chocolate;
     border-radius: 10px;
-    height: 35px;
-    margin-top: 5px;
+    text-decoration: underline;}
+html,body{
+overflow-x: hidden;
 }
-.button:hover{
-    background: #2e4e74;
-    color: white;
-}
-.nav-item a:checked{
-    background-color: antiquewhite;
-}
-.nav ul li a:active{
-    background-color: antiquewhite;
+.products a:hover{
 
+color:chocolate;
+border-radius: 10px;
+text-decoration: underline;
 }
-
-.navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=BFE100');
-  }
-.span{
-    height: 0.4rem;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 0.2rem;
+.products a:active{
+color:chocolate;
+border-radius: 10px;
+text-decoration: underline;
 }
-
-
-.button{
-    border-radius: 10px;
-    height: 50px;
-    width: 150px;
-    background-color: #c6f4ff;
-    margin-right: 55px;
-    font-family: NavItem;
+div button:hover{
+background: #2e4e74;
+color: white;
 }
-.image,.nav-item{
-    margin-left: 10px;
-    margin-right:50px;
-    
+div button{
+border-radius: 10px;
+height: 50px;
+width: 150px;
+background-color:blue;
+margin-top: 10px;
+margin-left: 1350px;
+position: fixed;
+font-family: NavItem;
+float: right;
+}
+.header,.items{
+margin-left: 10px;
+margin-right:100px;
+
 }
 @media screen and (max-width: 768px){
-    .navbar1 {
-        padding: 5px 5px;
-      }
-    
-      .navbar-nav {
-        flex-direction: column;
-      }
-    
-      .nav-item {
-        margin-right: 0;
-        margin-bottom: 10px;
-      }
-    .nav{
-        width: 100px;
-    }
     .header{
-        background-color: blue;
-        margin-left: 100px;
-        width: 100px;
+        display: none;
     }
-    .container-fluid first,.image{
-        height: 20px;
-        width: 20px;
+    .products{
+        display: none;
     }
-    .button{
+    div img{
+        margin-left: 0px;
+        padding-right: 30px;
+    }
+    div button{
         border-radius: 10px;
         height: 30px;
-        width: 80px;
-        background-color: #c6f4ff;
-        margin-right: 100px;
+        width: 60px;
+        background-color:rgb(69, 69, 240);
+        margin-top: 5px;
+        margin-left: 320px;
+        font-size: 7px;
         font-family: NavItem;
-        font-size: 8px
+        float: right;
     }
-    .image,.nav-item{
-        margin-left: 1px;
-        margin-right:2px;
-        
-    }
-    .nav-item{
-        animation: 2s linear 0s alternate float-in;
-        margin-right: 10px;
-        color: blue;
-        font-family: NavItem;   
-        font-size: xx-large;
-    }
-    .items{
-        margin-right: 0px;
-    }
-    .first{
-        background-color: #c6f4ff;
-        margin-right: 0px;
-    }
-    .nav-item,.button{
-        margin-left: 0px;
-        margin-right: 0%;
+    .dropbtn{
+        display: none;
     }
 
-  }
+}
 

@@ -80,9 +80,9 @@
         text-align: center;
         overflow: hidden; 
         border-right: .15em solid ;
-        margin: 0px 20px 2px 5px;
+        margin: 0px 20px 2px 2px;
         letter-spacing: .15em;
-        animation: typing 4.5s steps(40, end),blink-cursor .75s step-end infinite;
+        animation: typing 4.5s steps(20, end),blink-cursor .75s step-end infinite;
         padding: 0 1%;
     }
     .head{

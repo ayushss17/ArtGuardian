@@ -1,0 +1,57 @@
+.acc{
+    background-color:  #c6f4ff;
+}
+.buys{
+    background-color: #F8D49A;
+}
+.Sell{
+    background-color: aliceblue;
+}
+.acc img{
+    margin-left: 50px;
+    border-radius: 80%;
+    margin-bottom: 50px;
+}
+.acc h1{
+    margin-right: 1150px;
+    margin-top: 30px;
+    
+}
+.acc p{
+    float: right;
+    
+}
+hr{
+    line-height: 0px;
+}
+.buys{
+    line-height: 0px;
+}
+.buys h2{
+    margin-bottom: 150px;
+}
+.Sell h2{
+    margin-bottom: 150px;
+}
+div .acc{
+    border-bottom: 10px;
+    box-sizing: border-box;
+    border-color: black;
+    border: 1px solid black;
+
+}
+div .buys{
+    border-bottom: 10px;
+    box-sizing: border-box;
+    border-color: black;
+    border: 1px solid black;
+
+}
+div .Sell{
+    border-bottom: 10px;
+    box-sizing: border-box;
+    border-color: black;
+    border: 1px solid black;
+
+}
+

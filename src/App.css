@@ -1,6 +1,19 @@
 .App {
   text-align: center;
+  height: 100%;
+  width: 100%;
 }
+.products a:hover{
+
+  color:chocolate;
+  border-radius: 10px;
+  text-decoration: underline;
+  }
+  .products a:active{
+      color:chocolate;
+  border-radius: 10px;
+  text-decoration: underline;
+  }
 
 .App-logo {
   height: 40vmin;

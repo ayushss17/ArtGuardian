@@ -21,6 +21,20 @@
     writing-mode: vertical-rl;
     margin-left: 100px;
 }
+.wallet{
+    display: none;
+}
+.button{
+    border-radius: 10px;
+height: 50px;
+width: 150px;
+background-color:blue;
+margin-top: 10px;
+margin-left: 1350px;
+position: fixed;
+font-family: NavItem;
+float: right;
+}
 .links{
     margin-top: 80px;
 }
@@ -55,7 +69,7 @@ a.sub-titles:visited {
 a.sub-titles:hover {
     color: white;
     background-color: transparent;
-    text-decoration: underline;
+    text-decoration: none;
   }
 a.sub-titles:active {
     color: yellow;
@@ -64,6 +78,16 @@ a.sub-titles:active {
 }
 
 @media screen and (max-width: 768px){
+    .wallet{
+    display: flex;
+    margin-top: 220px;
+    writing-mode: horizontal-tb;
+    background-color: aqua;
+    border-radius: 10px;
+    width: 50px;
+    
+        
+    }
     .container{
       padding: 0 3.2rem
     }
@@ -71,10 +95,10 @@ a.sub-titles:active {
         margin-left: 0px;
         font-size: 13px;
         color:black;
-        margin-right: 100px;
+        margin-right: 50px;
     }
     .title1{
-        margin-left: 70px;
+        margin-left: 10px;
     }
     .footer{
         background-size: 380px;
