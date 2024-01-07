@@ -16,9 +16,9 @@ const why = () => {
             <div className='user'>User-Friendly</div>
             <div className='mult'>Multi-User</div>           
         </div>
-        <img src={secure} className='imgs'></img>
-        <img src={userf} className='imgs'></img>
-        <img src={multi} className='imgs'></img>
+        <img src={secure} className='imgs' alt='no image'></img>
+        <img src={userf} className='imgs'alt='no image'></img>
+        <img src={multi} className='imgs'alt='no image'></img>
         <br/><br/><br/><br/><br/><br/><br/>
       </div>
     </div>

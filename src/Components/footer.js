@@ -1,7 +1,13 @@
 import React from 'react'
 import './footer.css'
+import NavBar from './NavBar'
 import arts from '../Components/Images/arts.png'
+import { Nav, Navbar } from 'react-bootstrap'
+import {Button} from '@mui/material'
+import { Link } from 'react-router-dom'
+import setIsClicked from './NavBar.jsx'
 const footer = () => {
+    setIsClicked('none')
     return (
         <div>
             <div className='container-fluid footer'>
@@ -12,7 +18,7 @@ const footer = () => {
                     <div className='title1'>QUICK LINKS
                         <div className='lin-titl'>
                             <div className='links'>
-                                <a href='/' className='sub-titles'>Home</a><br />    
+                            <Link to='/' onClick={''}>Clic</Link>
                             </div>
                             <div className='link2'>SUPPORT | FOLLOW | CONTACT </div>
                         </div>   

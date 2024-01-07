@@ -83,7 +83,7 @@ color:chocolate;
 border-radius: 10px;
 text-decoration: underline;
 }
-div button:hover{
+button:hover{
 background: #2e4e74;
 color: white;
 }
@@ -97,6 +97,18 @@ margin-left: 1350px;
 position: fixed;
 font-family: NavItem;
 float: right;
+}
+.buttons .connect{
+    height: 50px;
+    width: 250px;
+    background-color:#c6f4ff;
+    margin-top: 10px;
+    readOnly:true;
+    margin-left: 1250px;
+    position: fixed;
+    font-family: NavItem;
+    float: right;
+    border: none;
 }
 .header,.items{
 margin-left: 10px;
