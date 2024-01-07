@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState,useEffect } from 'react';
 import './NavBar.css'
 import logo from '../Components/Images/art.png'
 import HomeInfo from './HomeInfo';
@@ -7,6 +8,20 @@ import Why from './why';
 import Footer from './footer';
 import { Link, a } from 'react-router-dom';
 const NavBar = () => {
+    const [state,setState]=useState({
+      provider:null,
+      signer:null,
+      contractor:null
+    });
+    const template= async () =>{
+        const contractAddress="";
+        const contractABI="";
+        //Metamask wallet code
+        const {ethereum}=window;
+        const account =await ethereum.request({
+          method :"eth_requestAccounts"
+        })
+      }
     return (
        <div>
         <div className='NavBar'>
@@ -34,7 +49,7 @@ const NavBar = () => {
             <Link to='/profile' class="dropbtn" target='_blank'>Profile</Link>
             </li>
           </ul>
-          <button>Connect To Wallet</button>
+          <button onClick={()=>{template()}}>Connect To Wallet</button>
         </div>
         <main>
          <section id="Home"><HomeInfo/></section>
