@@ -1,9 +1,5 @@
 import React from 'react'
 import './footer.css'
-import NavBar from './NavBar'
-import arts from '../Components/Images/arts.png'
-import { Nav, Navbar } from 'react-bootstrap'
-import {Button} from '@mui/material'
 import { Link } from 'react-router-dom'
 import setIsClicked from './NavBar.jsx'
 const footer = () => {

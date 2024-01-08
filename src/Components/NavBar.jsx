@@ -1,17 +1,12 @@
-import React,{Component} from 'react'
-import { useState, useEffect } from 'react';
+import React from 'react'
+import { useState,  } from 'react';
 import './NavBar.css'
 import logo from '../Components/Images/art.png'
 import HomeInfo from './HomeInfo';
 import About from './About';
 import Why from './why';
 import Footer from './footer';
-import { Link, a } from 'react-router-dom';
-import { Box, TextField } from '@mui/material'
-import { render } from '@testing-library/react';
-import styled from 'styled-components';
-import { Button } from 'bootstrap';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
+import { Link } from 'react-router-dom';
 const initialAccount = {
   login: {
     view: 'connected to wallet'
@@ -31,21 +26,7 @@ const initialAccount = {
 // position: fixed;
 // font-family: NavItem;
 // float: right;
-const styleObj = {
-  "&:hover": {
-    backgroundColor: "red"
-  },
-  "&:active": {
-    backgroundColor: "black",
-    text:"Hello"
-  },
-  "&focused":{
-    backgroundColor:"White"
-  },
-  "&click":{
-    backgroundColor:"Blue"
-  }
-};
+
 
 const NavBar = () => {
   const [accounts, toggleB] = useState(initialAccount.signup)

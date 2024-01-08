@@ -8,7 +8,8 @@ const valid= new mongoose.Schema({
     url: String,
     bigUrl:String,
     Artist:String,
-    title: Object,
+    shortTitle:String,
+    longTitle:String,
     price: String
 });
 
