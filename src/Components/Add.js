@@ -1,5 +1,7 @@
 import React from 'react'
+import { useState } from 'react'
 import { Dialog,styled, TextField,Box, Typography,Button } from '@mui/material'
+import { autheticate } from './Services/api'
 import './Add.css'
 
 
@@ -19,17 +21,36 @@ const Component =styled(Box)`
  backgroundColor:blue
     position:fixed
  `
-const div= styled(Dialog)
+ const signupInitialValues = {
+  artist: '',
+  title: '',
+  bigtitle: '',
+  price:'',
+  Link1:'',
+  Link2:''
+ }
 const Add = ({open,setOpen}) => {
     const handleclose = () => {
-        setOpen(false)
+        setOpen(false)    
       }
+
+    const [signUp, setSignup] = useState(signupInitialValues)
+
+    const inputChng = (e) =>{
+      setSignup({...signUp, [e.target.name]: e.target.value})
+      console.log(signUp)
+      }
+    const submit = async () =>{
+      const response = await autheticate(signUp);
+      if(response!=null){
+        alert("Hello")
+      }
+    }
   return (
-    <div>
-        
-      <Dialog open={open} onClose={handleclose} PaperProps={{
+    <div>   
+      <Dialog open={open} onClose={handleclose} PaperProps={{   
     style: {
-      backgroundColor: '#E27D60',
+      backgroundColor: '#9897A9',
       boxShadow: 'none',
     },
   }}>
@@ -37,14 +58,16 @@ const Add = ({open,setOpen}) => {
         <Component>
         <Box> 
             <Wrapper justifyContent="center" > 
-             <TextField variant='outlined' label="Enter the Artist Name" style={{marginBottom:'10px'}}></TextField>
-             <TextField variant='outlined' label="Enter the Short Title for Art"  style={{marginBottom:'10px'}}></TextField>
-             <TextField variant='outlined' label='Enter the Description'  style={{marginBottom:'10px'}}></TextField> 
-             <TextField variant='outlined' label='Enter your price'  style={{marginBottom:'10px'}}></TextField>
-             <Typography>Enter two file images</Typography>  
-             <input class='form-control-sm' type='file'></input> 
-             <input class='form-control-sm' type='file'></input>
-             <input type='button' value={'Submit'}></input>
+             <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='artist'   label="Enter the Artist Name"          style={{marginBottom:'10px'}}></TextField>
+             <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='title'    label="Enter the Short Title for Art"  style={{marginBottom:'10px'}}></TextField>
+             <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='bigtitle' label='Enter the Description'          style={{marginBottom:'10px'}}></TextField> 
+             <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='price'    label='Enter your price'               style={{marginBottom:'10px'}}></TextField>
+             <Typography>Enter two file images</Typography> 
+             <sub>*Kindly Share Google Drive Links of images</sub> 
+             <br/ >
+             <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='Link1'    label='Image1'               style={{marginBottom:'10px'}}></TextField>
+             <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='Link2'    label='Image2'               style={{marginBottom:'10px'}}></TextField>
+             <input type='button' value={'Submit'} onClick={() =>{submit()}}></input>
              </Wrapper>
         </Box>
         </Component>

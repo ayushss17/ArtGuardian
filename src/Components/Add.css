@@ -17,10 +17,15 @@ input[type=file]{
 input[type=button]{
     width: 120px;
     height: 50px;
-    margin:60px 20px 0px 180px;
+    margin:6px 20px 0px 180px;
     background-color: #CFE8EF;
     border-radius: 10px;
 }
 input[type=button]:hover{
    background-color: #5B7C99;
+}
+sub{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: xx-small;
 }

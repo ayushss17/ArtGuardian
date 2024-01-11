@@ -1,13 +1,17 @@
-import {data} from './constant/data.js'
-import Product from './model/products.js';
+import addItem from './model/addschema.js';
 
-const defaultData = async () => {
+const defaultData = async (request,response) => {
     try{
-        await Product.insertMany(data )
-        console.log("Data loaded")
+        const items = request.body;
+        const newData = new addItem(items);
+        await newData.save()
+        response.status(200).json({message: items})
+        if(items!=null){
+            alert("Art Submitted")
+        }
     }
     catch(error){
-        console.log(error.message)
+       response.status(500).json({message: error.message})
     }
 }
 

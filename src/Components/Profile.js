@@ -4,7 +4,6 @@ import './Profile.css'
 import prof from '../Components/flower1.jpg'
 import Add from './Add'
 import { useState } from 'react'
-import { Dialog,Typography,selectedValue,SimpleDialog } from '@mui/material'
 const Profile = () => {
   const [open,setOpen]= useState(false);
   const openDial= () =>{
