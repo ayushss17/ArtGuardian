@@ -41,12 +41,15 @@ const NavBar = () => {
   const template = async () => {
     const contractAddress = "";
     const contractABI = "";
+    window.localStorage.setItem("isLogged",true)
     //Metamask wallet code
     const { ethereum } = window;
     const account = await ethereum.request({
-      method: "eth_requestAccounts"
+      method: "eth_requestAccounts"      
     })
    }
+   const login=window.localStorage.getItem("isLogged")
+   console.log(login,"login")
   return (
     <div>
       <div className='NavBar'>
@@ -75,25 +78,25 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
+      {  
       <div className='buttons'>
-          <button type='button' onClick={ () => {
-            console.log("clicked")
-            template();
-            if(!isClicked){
-              setisClik('')
-              setIsClicked('none')
-            }
-          }}value={'hello'} style={{display:isClicked}} >Connect To Wallet </button>
-          <button type='button' value={'hello'} style={{display:isClick}} readOnly='true' className='connect'>Connected account : 1234567890</button>
-          
-          </div>
-        
-      <main>
-        <section id="Home"><HomeInfo /></section>
-        <section id="About"><About /></section>
-        <section id="Why"><Why /></section>
-        <section id="Footer"><Footer /></section>
-      </main>
+      if ({!login}) {
+          <button type='button' onClick={() => {
+            console.log("clicked");
+            template();}}>Connect To Wallet </button>
+      }
+      else {
+        <button type='button' value={'hello'} readOnly='true' className='connect'>Connected account : 1234567890</button>
+      }  
+      </div>
+      }
+      
+          <main>
+            <section id="Home"><HomeInfo /></section>
+            <section id="About"><About /></section>
+            <section id="Why"><Why /></section>
+            <section id="Footer"><Footer /></section>
+          </main>
     </div>
 
 
