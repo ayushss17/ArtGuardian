@@ -10,11 +10,15 @@ const footer = () => {
             <div className='wallet'>
                     <center>Connect To Wallet</center>
                 </div> 
+                
                 <div className='titles'>
                     <div className='title1'>QUICK LINKS
                         <div className='lin-titl'>
                             <div className='links'>
-                            <Link to='/' onClick={''}>Clic</Link>
+                                <ul><li>                            <Link to='/' onClick={''}>Clic</Link>
+</li><li>                            <button name="connect" onClick={""}>Hello</button>
+</li></ul>
+                            
                             </div>
                             <div className='link2'>SUPPORT | FOLLOW | CONTACT </div>
                         </div>   

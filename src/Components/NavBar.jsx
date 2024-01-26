@@ -16,47 +16,42 @@ const initialAccount = {
   }
 }
 
-// const Button = styled (Button)`
-// border-radius: 10px;
-// height: 50px;
-// width: 150px;
-// background-color:blue;
-// margin-top: 10px;
-// margin-left: 1350px;
-// position: fixed;
-// font-family: NavItem;
-// float: right;
 
 
-const NavBar = () => {
+const NavBar = (disBtn,disBtn1) => {
   const [accounts, toggleB] = useState(initialAccount.signup)
-
   const [state, setState] = useState({
     provider: null,
     signer: null,
     contractor: null
   });
-  const [isClicked,setIsClicked]=useState(false);
-  const [isClick,setisClik]=useState('none')
+  var log;
   const template = async () => {
+    window.localStorage.setItem("isLogged",true)
     const contractAddress = "";
     const contractABI = "";
-    window.localStorage.setItem("isLogged",true)
     //Metamask wallet code
     const { ethereum } = window;
     const account = await ethereum.request({
-      method: "eth_requestAccounts"      
-    })
+      method: "eth_requestAccounts"   
+         
+    }
+    )
+    return log;
    }
-   const login=window.localStorage.getItem("isLogged")
-   console.log(login,"login")
+    const logout = () =>{
+      window.localStorage.removeItem("isLogged")
+    }
+    log=window.localStorage.getItem("isLogged")
+    console.log(log)
+
   return (
     <div>
       <div className='NavBar'>
         <ul className='header'>
           <li>
             <a href='#Home'>
-              <img src={logo} height="50" width="200"></img>
+              <img src={logo} height="50" width="200" onClick={() =>{logout()}}></img>
             </a>
           </li>
         </ul>
@@ -71,27 +66,22 @@ const NavBar = () => {
             <a href='#Why'>Why Choose Us</a>
           </li>
           <li className='products'>
-            <a href='#Products'>Products</a>
+          <Link to='/products' class="dropbtn" target='_blank'>Products</Link>
           </li>
           <li class="products">
             <Link to='/profile' class="dropbtn" target='_blank'>Profile</Link>
           </li>
         </ul>
       </div>
-      {  
       <div className='buttons'>
-      if ({!login}) {
-          <button type='button' onClick={() => {
-            console.log("clicked");
-            template();}}>Connect To Wallet </button>
+      { <>
+        {log===false?
+         <button onClick={()=>{template()}}>Connect TO Wallet</button>:<button className='connect'>Connected Acc: </button> }
+
+      </> 
       }
-      else {
-        <button type='button' value={'hello'} readOnly='true' className='connect'>Connected account : 1234567890</button>
-      }  
       </div>
-      }
-      
-          <main>
+         <main>
             <section id="Home"><HomeInfo /></section>
             <section id="About"><About /></section>
             <section id="Why"><Why /></section>

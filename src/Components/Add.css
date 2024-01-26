@@ -1,6 +1,11 @@
 .dialogbox{
-    width: 300px;
+    width: 500px;
     background-image: '';
+    display:none;
+    position: fixed;
+}
+.dialogbox:active div .acc p{
+    display: none;
 }
 .form-control-sm{
     display: flex;

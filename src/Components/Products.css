@@ -1,0 +1,24 @@
+.typeP{
+    background-color: aqua;
+    top: 0;
+}
+.prod{
+    margin-top: 100px;
+}
+h2{
+}
+.typeP button{
+    margin-right: 100px;
+    align-items: center;
+}
+
+body{
+    margin: 0px !important;
+    line-height: 1;
+    top: 0;
+}
+
+.main{
+    margin-left: 10px;
+    margin-right: 200px;
+}

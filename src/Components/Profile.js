@@ -12,22 +12,24 @@ const Profile = () => {
   return (
     <>
     <div className='acc'>
-    <button onClick={()=>{openDial()}}>Add a New ART</button>
-    <Add open={open} setOpen={setOpen}></Add>
-      <img src={prof} height="200" width="200" alt='No Profile Photo'></img>
+      <img src={prof} height="200" width="200" alt='No Profile'></img>
+      {open?console.log("Hell"):
       <p>
         <h1>Hello,</h1>
         <h5>Ayush Sawant</h5>
       </p>
+      }<button onClick={()=>{openDial()}}>Add a New ART</button>
+      <Add open={open} setOpen={setOpen}></Add>
     </div>
-    <div className='buys' >
-        <h2>Buys -</h2>
+      <div className='buys'>
+      
+          <h2>Buys -</h2>
+      
     </div>
     <div className='Sell'>
         <h2>Sells - </h2>
         <Footer />
-    </div></>
-
+      </div></>
   )
 }
 

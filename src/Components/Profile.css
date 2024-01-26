@@ -23,17 +23,18 @@
     width: 200px;
     background-color: #e8a87c;
     margin-top: 85px;
-    margin-left: 1150px;
+    margin-left: 950px;
     position: fixed;
     font-family: NavItem;
     float: right;
+    position:absolute;
+    
 }
-.acc button:hover{
-    background-color: #41B3A3;
+.acc button:active{
+    background-color: #c6f4ff;
 }
 .acc p{
     float: right;
-    
 }
 hr{
     line-height: 0px;

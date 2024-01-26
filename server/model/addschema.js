@@ -18,6 +18,10 @@ const addschema = new mongoose.Schema({
         type:String,
         required:true
     },
+    types:{
+        type:String,
+        required:true
+    },
     Link1: {
         type:String,
         required:true

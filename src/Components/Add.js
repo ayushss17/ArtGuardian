@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Dialog,styled, TextField,Box, Typography,Button } from '@mui/material'
 import { autheticate } from './Services/api'
 import './Add.css'
-
+import { Dropdown } from 'bootstrap'
 
 const Component =styled(Box)`
     height: 70vh;
@@ -26,12 +26,13 @@ const Component =styled(Box)`
   title: '',
   bigtitle: '',
   price:'',
+  types:'',
   Link1:'',
   Link2:''
  }
 const Add = ({open,setOpen}) => {
     const handleclose = () => {
-        setOpen(false)    
+        setOpen(false)  
       }
 
     const [signUp, setSignup] = useState(signupInitialValues)
@@ -48,10 +49,13 @@ const Add = ({open,setOpen}) => {
     }
   return (
     <div>   
-      <Dialog open={open} onClose={handleclose} PaperProps={{   
+      <Dialog open={open} onClose={()=>{
+        handleclose()
+      }} PaperProps={{   
     style: {
-      backgroundColor: '#9897A9',
+      backgroundColor: 'transparent',
       boxShadow: 'none',
+      display:'absolute'
     },
   }}>
       <h2 style={{marginTop:'20px', marginLeft:'30px'}}>~Add Your Art Work</h2> 
@@ -63,6 +67,12 @@ const Add = ({open,setOpen}) => {
              <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='bigtitle' label='Enter the Description'          style={{marginBottom:'10px'}}></TextField> 
              <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='price'    label='Enter your price'               style={{marginBottom:'10px'}}></TextField>
              <Typography>Enter two file images</Typography> 
+             <select name="type" onChange={(e) => {inputChng(e)}}>
+              <option name='history'>History Painting</option>
+              <option name='portrait'>Portrait</option>
+              <option name='landscape'>Landscape </option>
+              <option name='still'>StillLifePainting</option>
+             </select>
              <sub>*Kindly Share Google Drive Links of images</sub> 
              <br/ >
              <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='Link1'    label='Image1'               style={{marginBottom:'10px'}}></TextField>
