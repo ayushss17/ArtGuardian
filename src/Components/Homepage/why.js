@@ -1,8 +1,8 @@
 import React from 'react'
 import './why.css'
-import secure from '../Components/Images/secure.png'
-import userf from '../Components/Images/userF.png'
-import multi from '../Components/Images/multi.png'
+import secure from '../Images/secure.png'
+import userf from '../Images/userF.png'
+import multi from '../Images/multi.png'
 const why = () => {
   return (
     <div>

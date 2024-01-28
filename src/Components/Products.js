@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useRef, } from 'react'
 import './Products.css'
-import { Button } from '@mui/material'
+import { Button, Typography,styled } from '@mui/material'
+import LoadingBar from 'react-top-loading-bar'
+import { blue } from '@mui/material/colors'
+import products from '../App.js'
 
-
-const Products = () => {
+const Products = ({products}) => {
     const [open1,isHistOpen]=useState('none')
     const [open2,isPortOpen]=useState('none')
     const [open3,isLandOpen]=useState('none')
@@ -43,7 +45,11 @@ const Products = () => {
     console.log(open3)
     console.log(open4)
     }
-    
+    const link="https://drive.google.com/file/d/1MOilUj3qatDUxc65bRVZyDaKBjILi-7Q/view?usp=sharing"
+    const Text= styled(Typography)`
+        font-size: 14px;
+        display: flex;
+    `
   return (
     <div style={{margin:'0px',top:0}}>
         <div className='typeP'>
@@ -53,9 +59,19 @@ const Products = () => {
             <button className="types"  name="2" onClick={(e)=>{Chng(e)}}>Hello</button>
             <button className="types"  name="3" onClick={(e)=>{Chng(e)}}>Hello</button>
         </div>
-        <div className='prod'>
-       <div className='Hist' style={{display:open1}}>
-        History
+        <div className='types'>
+         <div className='Hist' style={{display:open1,textAlign:'center', padding:'25px 15px'}}>
+        {
+             products.map(product => (
+                <>
+                <a><img src={product.Link1}/>
+                <Text style={{marginRight:"40px", fontWeight: 600,color:'#212121'}}>By {product.artist}</Text>
+                <Text style={{display:'inline',textAlign:'center',fontSize:'25px', float:'left', marginLeft:'30px'}}><br/>{product.title}</Text>
+                <Text>{product.bigtitle}</Text>
+                <button style={{marginTop:'50px'}}>BUY NOW</button>
+                </a>
+                </>
+             ))}
        </div >
        <div className='Port' style={{display:open2}}>
         Portraits
@@ -67,9 +83,9 @@ const Products = () => {
         Stills
        </div>
        </div>
+       </div>
 
       
-    </div>
   )
 }
 

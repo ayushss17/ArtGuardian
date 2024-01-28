@@ -1,8 +1,7 @@
 import React from 'react';
-import NavBar from './Components/NavBar';
+import NavBar from './Components/NavigationBar/NavBar.jsx';
 import Profile from './Components/Profile';
-import HomeInfo from './Components/HomeInfo';
-import Frame from './Components/frame';
+import HomeInfo from './Components/Homepage/HomeInfo.js';
 import Products from './Components/Products';
 import { useEffect } from 'react';
 import { getProducts } from './Components/redux/actions/prodActions.js';
@@ -14,10 +13,10 @@ function App() {
   const dispatch = useDispatch();
 
   const {products}=useSelector(state =>  state.getProducts)
-  console.log(products)
+
   useEffect(()=>{
     dispatch(getProducts())
-  }, [dispatch])
+  }, [])
   return (
     
     <div>
@@ -27,7 +26,7 @@ function App() {
           <Route exact path='/' element={<NavBar/>}/>
           <Route exact path='Home' element={<HomeInfo/>}/>
           <Route exact path='profile' element={<Profile />} />
-          <Route exact path='products' element={<Products/>}/>
+          <Route exact path='products' element={<Products products={products}/>}/>
         </Routes>
       </Router>   
    </div>

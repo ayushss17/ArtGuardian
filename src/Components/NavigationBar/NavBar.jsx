@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState,  } from 'react';
 import './NavBar.css'
-import logo from '../Components/Images/art.png'
-import HomeInfo from './HomeInfo';
-import About from './About';
-import Why from './why';
-import Footer from './footer';
+import logo from '../Images/art.png'
+import HomeInfo from '../Homepage/HomeInfo';
+import About from '../Homepage/About';
+import Why from '../Homepage/why';
+import Footer from '../Homepage/footer';
 import { Link } from 'react-router-dom';
 const initialAccount = {
   login: {

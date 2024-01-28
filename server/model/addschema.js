@@ -18,7 +18,7 @@ const addschema = new mongoose.Schema({
         type:String,
         required:true
     },
-    types:{
+    type:{
         type:String,
         required:true
     },
@@ -28,7 +28,6 @@ const addschema = new mongoose.Schema({
     }
     ,Link2: {
         type:String,
-        required:true
     }
 })
 

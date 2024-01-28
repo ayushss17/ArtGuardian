@@ -1,8 +1,8 @@
 @font-face {
     font-family: abthead;
-    src: url(../Components/Fonts/Hansief.otf);
+    src: url(../Fonts/Hansief.otf);
     font-family: para;
-    src: url(../Components/Fonts/avenir.ttf);
+    src: url(../Fonts/avenir.ttf);
 }
 .about{
     background-color:#64C4C3 ;

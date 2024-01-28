@@ -1,31 +1,31 @@
 import React from 'react'
 import './footer.css'
 import { Link } from 'react-router-dom'
-import setIsClicked from './NavBar.jsx'
+import setIsClicked from '../NavigationBar/NavBar.jsx'
 const footer = () => {
     setIsClicked('none')
     return (
         <div>
             <div className='container-fluid footer'>
-            <div className='wallet'>
+                <div className='wallet'>
                     <center>Connect To Wallet</center>
-                </div> 
-                
+                </div>
+
                 <div className='titles'>
                     <div className='title1'>QUICK LINKS
                         <div className='lin-titl'>
                             <div className='links'>
-                                <ul><li>                            <Link to='/' onClick={''}>Clic</Link>
-</li><li>                            <button name="connect" onClick={""}>Hello</button>
-</li></ul>
-                            
+                                <ul><li> <Link to='/' onClick={''}>ClicK</Link>
+                                </li><li> <button name="connect" onClick={""}>Hello</button>
+                                    </li></ul>
+
                             </div>
                             <div className='link2'>SUPPORT | FOLLOW | CONTACT </div>
-                        </div>   
+                        </div>
                     </div>
-                    
+
                 </div>
-                
+
             </div>
         </div>
     )

@@ -1,9 +1,9 @@
 
 @font-face {
     font-family: whyhead;
-    src: url(../Components/Fonts/Aviatica.ttf);
+    src: url(../Fonts/Aviatica.ttf);
     font-family: imgtitle;
-    src: url(../Components/Fonts/pophalf.ttf);
+    src: url(../Fonts/pophalf.ttf);
 }
 @keyframes float-inwhy{
     from {
