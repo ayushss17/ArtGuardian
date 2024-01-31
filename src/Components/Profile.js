@@ -16,7 +16,7 @@ const Profile = () => {
         {open ? console.log("Hell") :
           <p>
             <h1>Hello,</h1>
-            <h5>Ayush Sawant</h5>
+            <h4>Ayush Sawant</h4>
           </p>
         }<button onClick={() => { openDial() }}>Add a New ART</button>
         <Add open={open} setOpen={setOpen}></Add>

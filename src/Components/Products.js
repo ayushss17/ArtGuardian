@@ -1,10 +1,6 @@
 import React, { useState,useRef, } from 'react'
 import './Products.css'
-import { Button, Typography,styled } from '@mui/material'
-import LoadingBar from 'react-top-loading-bar'
-import { blue } from '@mui/material/colors'
-import products from '../App.js'
-
+import { Button, Typography,createTheme,private_excludeVariablesFromRoot,styled } from '@mui/material'
 const Products = ({products}) => {
     const [open1,isHistOpen]=useState('none')
     const [open2,isPortOpen]=useState('none')
@@ -45,46 +41,68 @@ const Products = ({products}) => {
     console.log(open3)
     console.log(open4)
     }
-    const link="https://drive.google.com/file/d/1MOilUj3qatDUxc65bRVZyDaKBjILi-7Q/view?usp=sharing"
     const Text= styled(Typography)`
         font-size: 14px;
         display: flex;
-    `
+    
+        `
+    const theme=createTheme({
+        typography:{
+            Text1:{
+                fontFamily:''   
+            },
+        }
+    })
   return (
-    <div style={{margin:'0px',top:0}}>
+    <>
         <div className='typeP'>
-            <h2>Select catogories here:</h2>
-            <button className="types"  name="0" onClick={(e)=>{Chng(e)}}>Hello</button>
-            <button className="types"  name="1" onClick={(e)=>{Chng(e)}}>Hello</button>
-            <button className="types"  name="2" onClick={(e)=>{Chng(e)}}>Hello</button>
-            <button className="types"  name="3" onClick={(e)=>{Chng(e)}}>Hello</button>
-        </div>
+            <h3>Select Catogory Here</h3>
+            <button name="0" onClick={(e)=>{Chng(e)}}>Landscapes</button>
+            <button name="1" onClick={(e)=>{Chng(e)}}>Portraits</button>
+            <button name="2" onClick={(e)=>{Chng(e)}}>History</button>
+            <button name="3" onClick={(e)=>{Chng(e)}}>Stills    </button>
         <div className='types'>
-         <div className='Hist' style={{display:open1,textAlign:'center', padding:'25px 15px'}}>
-        {
+         <div className='Hist' style={{display:open1,textAlign:'center', padding:'10px 5px'}}>
+         <h3>Landscape Arts
+            <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
+         </h3>
+        {      
              products.map(product => (
                 <>
                 <a><img src={product.Link1}/>
-                <Text style={{marginRight:"40px", fontWeight: 600,color:'#212121'}}>By {product.artist}</Text>
-                <Text style={{display:'inline',textAlign:'center',fontSize:'25px', float:'left', marginLeft:'30px'}}><br/>{product.title}</Text>
-                <Text>{product.bigtitle}</Text>
-                <button style={{marginTop:'50px'}}>BUY NOW</button>
+                <Text style={{marginRight:"40px" ,fontWeight: 600,color:'#212121'}}><p id='artist'>By {product.artist}</p></Text>
+                <Text style={{display:'inline',textAlign:'center',fontSize:'25px', float:'left', marginLeft:'30px'}}><br/>
+                <p id='title'>{product.title}</p>
+                </Text>
+                <Text style={{display:'inline',textAlign:'center',marginLeft:'50px',marginRight:'30px'}}>
+                <p id='desc'>{product.bigtitle}</p></Text>
+                <Text style={{marginRight:'40px',fontSize:'20px'}}><br/>
+                <p id='price'>Price : {product.price}</p><br/></Text>
+                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}}>BUY NOW</button>
+                <hr></hr>
                 </a>
                 </>
              ))}
        </div >
        <div className='Port' style={{display:open2}}>
-        Portraits
-       </div>
+       <h3>Portrait Arts
+            <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
+         </h3>       </div>
        <div className='Land' style={{display:open3}}>
-        Landscapes
+       <h3>History Arts
+            <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
+         </h3>
        </div>
        <div className='Stills' style={{display:open4}}>
-        Stills
+       <h3>Still Arts
+            <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
+         </h3>
        </div>
+       
        </div>
        </div>
 
+       </>
       
   )
 }

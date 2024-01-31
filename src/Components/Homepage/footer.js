@@ -15,8 +15,7 @@ const footer = () => {
                     <div className='title1'>QUICK LINKS
                         <div className='lin-titl'>
                             <div className='links'>
-                                <ul><li> <Link to='/' onClick={''}>ClicK</Link>
-                                </li><li> <button name="connect" onClick={""}>Hello</button>
+                                <ul><li> <Link to='/' onClick={''}>Home</Link>
                                     </li></ul>
 
                             </div>

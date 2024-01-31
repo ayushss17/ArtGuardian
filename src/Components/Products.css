@@ -1,6 +1,106 @@
+@font-face {
+    font-family: lato;
+    src: url(./Fonts/lato.ttf);
+}
+@font-face {
+    font-family: mon;
+    src: url(./Fonts/Montserrat/Montserrat-Bold.otf);
+}
+@font-face {
+    font-family: monem;
+    src:url(./Fonts/merriweather.light.ttf);
+}
+@font-face {
+    font-family: exo;
+    src:url(./Fonts/Montserrat/MontserratAlternates-Medium.otf);
+}
+@font-face {
+    font-family: title;
+    src: url(./Fonts/aileron.italic.otf);
+}
+@font-face {
+    font-family: cat;
+    src: url(./Fonts/Montserrat/MontserratAlternates-SemiBold.otf);
+}
+@font-face {
+    font-family: btn-cat;
+    src: url(./Fonts/Button/RockhillSans-Rough.otf  );
+}
+@font-face {
+    font-family: btn-buy;
+    src: url(./Fonts/Button/ParksonPERSONALUSE-DemiBold.otf);
+}
+@keyframes float-in{
+    from {
+    transform: translateY(-5vh);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+@keyframes float-side{
+    from {
+    transform: translateX(-5vh);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
+@keyframes float-side1{
+    from {
+        transform: translateY(5vh);
+        opacity: 0;
+        }
+        to {
+        transform: translateY(0);
+        opacity: 1;
+        }
+}
+@keyframes move-down{
+   
+    0%{
+        transform: scale(2,2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+.typeP h3{
+    font-family: cat;
+}
 .typeP{
-    background-color: aqua;
+    background-color: #92C7CF;
     top: 0;
+}
+.types h3{
+    font-family: title;
+    font-size: 35px;
+    animation: 2s linear 0s alternate move-down;
+
+}
+#artist{
+    font-family: lato;
+    animation: 2s linear 0s alternate float-side;
+
+}
+#title{
+    font-family: side1;
+    animation: 3s linear 0s alternate float-side1;
+
+}
+#desc{
+    font-family: monem;
+    font-size: 13px;
+    animation: 3s linear 0s alternate float-side1;
+}
+#price{
+    font-family: exo ;
+    animation: 3s linear 0s alternate float-side1;
+
 }
 .prod{
     margin-top: 100px;
@@ -17,23 +117,58 @@ p{
 h5{
     margin-left: 250px;
     text-align: center;
-    
 }
-img{
+.types{
+    background-color: #AAD7D9;
+
+}
+.types img{
     height: 300px;
     width: 450px;
+    margin-top: 60px;
     margin-right: 30px;
     margin-left: 30px;
+    animation: 2s linear 0s alternate float-in;
+
     
+}
+.body{
+    margin: 0;
+    top: 0;
+}
+.select {
+    height: 900px;
+    width: 100%;
+    text-align: center;
+    background-color: #92C7CF;
+}
+.typeP h3{
+    text-align: center;
+    margin-bottom: 25px;
 }
 .Hist p{
     align-items: center;
     size: 30px;
 }
 .typeP button{
-    margin-right: 100px;
+    margin-right: 70px;
     align-items: center;
+    margin-left: 190px;
+    margin-bottom: 10px;
+    width: 100px;
+    border-radius: 20px 5px;
+    background-color: #226597;
+    font-family: btn-cat;
 }
+.types button{
+    font-family: btn-buy;
+    font-size: 25px;
+}
+.Hist button{
+    border-radius: 50px 0px 0px 50px;
+
+}
+
 
 body{
     margin: 0px !important;
