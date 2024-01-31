@@ -114,6 +114,24 @@ p{
     grid-template-columns: 1fr 1fr 1fr;
     counter-gap: 5px;
 }
+.Land{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    counter-gap: 5px;
+}
+.Port{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    counter-gap: 5px;
+}
+.Still{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    counter-gap: 5px;
+}
 h5{
     margin-left: 250px;
     text-align: center;
@@ -159,6 +177,10 @@ h5{
     border-radius: 20px 5px;
     background-color: #226597;
     font-family: btn-cat;
+}
+hr{
+    margin-right:100px ;
+    margin-left:100px ;
 }
 .types button{
     font-family: btn-buy;

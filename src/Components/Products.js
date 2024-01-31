@@ -1,46 +1,52 @@
-import React, { useState,useRef, } from 'react'
+import React, { useState,useRef, useEffect, } from 'react'
 import './Products.css'
 import { Button, Typography,createTheme,private_excludeVariablesFromRoot,styled } from '@mui/material'
-const Products = ({products}) => {
+import {getProducts} from './redux/actions/getProducts.js'
+import { useDispatch ,useSelector} from 'react-redux';
+import { Dispatch } from 'redux';
+const Products = ({paintType,products}) => {
     const [open1,isHistOpen]=useState('none')
     const [open2,isPortOpen]=useState('none')
     const [open3,isLandOpen]=useState('none')
     const [open4,isStillOpen]=useState('none')
-    
+    const [selectedType, setSelectedType] = useState('Landscape');
     const Chng = (e)=>{
         // const  val=e.target.options[e.target.selectedIndex].value;
         const val=e.target.name
         console.log(val)
-        if (val=='0') {
-            isHistOpen(true)
-            isPortOpen('none')
+        if (val=="History") {
+            isLandOpen(true)
+            isHistOpen('none')
             isLandOpen('none')
             isStillOpen('none')
         }
-        if (val=='1'){
+        if (val=='Portrait'){
             isPortOpen(true)
             isHistOpen('none')
             isStillOpen('none')
             isLandOpen('none')
            
         }
-        if (val=='2'){
-            isLandOpen(true)
-            isHistOpen('none')
-            isPortOpen('none')
+        if (val=='Landscape'){
+            isHistOpen(true)
+            isLandOpen('none')
             isStillOpen('none')
+            isPortOpen('none')
         }
-        if (val=='3'){
+        if (val=='StillLifePainting'){
             isStillOpen(true)
             isHistOpen('none')
             isPortOpen('none')
             isLandOpen('none')
         }
-        console.log(open1)
-    console.log(open2)
-    console.log(open3)
-    console.log(open4)
+        setSelectedType(val);
     }
+    useEffect(()=>{
+        getProducts(paintType);
+    },[getProducts,paintType])
+    
+    const {paintings}=useSelector(state =>  state.getProducts)
+    console.log(paintings)
     const Text= styled(Typography)`
         font-size: 14px;
         display: flex;
@@ -57,13 +63,13 @@ const Products = ({products}) => {
     <>
         <div className='typeP'>
             <h3>Select Catogory Here</h3>
-            <button name="0" onClick={(e)=>{Chng(e)}}>Landscapes</button>
-            <button name="1" onClick={(e)=>{Chng(e)}}>Portraits</button>
-            <button name="2" onClick={(e)=>{Chng(e)}}>History</button>
-            <button name="3" onClick={(e)=>{Chng(e)}}>Stills    </button>
+            <button name="Landscape" onClick={(e)=>{Chng(e)}}>Landscapes</button>
+            <button name="Portrait" onClick={(e)=>{Chng(e)}}>Portraits</button>
+            <button name="History" onClick={(e)=>{Chng(e)}}>History</button>
+            <button name="StillLifePainting" onClick={(e)=>{Chng(e)}}>Stills    </button>
         <div className='types'>
-         <div className='Hist' style={{display:open1,textAlign:'center', padding:'10px 5px'}}>
-         <h3>Landscape Arts
+         <div className='Land' style={{display:open1,textAlign:'center', padding:'10px 5px'}}>
+         <h3>Landscapes Arts
             <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
          </h3>
         {      
@@ -84,24 +90,25 @@ const Products = ({products}) => {
                 </>
              ))}
        </div >
-       <div className='Port' style={{display:open2}}>
-       <h3>Portrait Arts
-            <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
-         </h3>       </div>
-       <div className='Land' style={{display:open3}}>
-       <h3>History Arts
+       <div className='Port' style={{display:open2,textAlign:'center', padding:'10px 5px'}}>
+         <h3>Portrait Arts
             <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
          </h3>
-       </div>
-       <div className='Stills' style={{display:open4}}>
-       <h3>Still Arts
+       </div >
+       <div className='Hist' style={{display:open3,textAlign:'center', padding:'10px 5px'}}>
+         <h3>History Arts
             <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
          </h3>
-       </div>
+       </div >
+       <div className='Still' style={{display:open4,textAlign:'center', padding:'10px 5px'}}>
+         <h3>Still Arts
+            <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
+         </h3>
+       </div >
        
        </div>
        </div>
-
+        <getProducts paintType={selectedType}/>
        </>
       
   )

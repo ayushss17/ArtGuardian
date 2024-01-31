@@ -4,21 +4,19 @@ import Profile from './Components/Profile';
 import HomeInfo from './Components/Homepage/HomeInfo.js';
 import Products from './Components/Products';
 import { useEffect } from 'react';
-import { getProducts } from './Components/redux/actions/prodActions.js';
-import { useDispatch ,useSelector} from 'react-redux';
+import { getProducts } from './Components/redux/actions/getProducts.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import selectedType from './Components/Products.js'
+import { useDispatch,useSelector } from 'react-redux';
 function App() {
-  
   const dispatch = useDispatch();
 
   const {products}=useSelector(state =>  state.getProducts)
-
+ 
   useEffect(()=>{
     dispatch(getProducts())
   }, [])
   return (
-    
     <div>
       
  <Router>

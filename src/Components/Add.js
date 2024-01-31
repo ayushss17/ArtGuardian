@@ -75,16 +75,14 @@ const Add = ({open,setOpen}) => {
               <option name='still'>StillLifePainting</option>
              </select><br/>
              <Typography>Enter two file images</Typography> 
-
              <sub>*Kindly Share Google Drive Links of images</sub> 
-             <br/ >
+             <br/>
              <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='Link1' label='Image1' style={{marginBottom:'10px',width:"500px"}}></TextField>
              <TextField variant='outlined' onChange={(e) => {inputChng(e)}} name='Link2' label='Image2' style={{marginBottom:'10px',width:"500px"}}></TextField>
              <input type='button' value={'Submit'} onClick={() =>{submit()}}></input>
              </Wrapper>
         </Box>
         </Component>
-
       </Dialog>
     </div>
   )
