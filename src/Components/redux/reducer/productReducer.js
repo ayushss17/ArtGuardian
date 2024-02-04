@@ -5,8 +5,11 @@ import { GET_PROD_FAILURE } from "../constants/prodConstants";
 import { type } from "@testing-library/user-event/dist/type";
 
 
-
-export const getProductsReducer = (state = {products: []},action)=>{
+const initialState = {
+    products: [],
+    error: null,
+  };
+export const getProductsReducer = (state = initialState,action)=>{
 
     switch(action.type){
         case GET_PROD_SUCCESS:

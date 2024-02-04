@@ -7,6 +7,8 @@ const reducer = combineReducers({
     getProducts: getProductsReducer
 })
 
+
+
 const middleware = [thunk];
 
 const store = createStore(

@@ -22,14 +22,14 @@ const Profile = () => {
         <Add open={open} setOpen={setOpen}></Add>
       </div>
       <div className='buys'>
-
         <h2>Buys -</h2>
-
       </div>
       <div className='Sell'>
-        <h2>Sells - </h2>
-        <Footer />
-      </div></>
+<h2>Hell</h2>
+      </div>
+      <Footer />
+</>
+      
   )
 }
 

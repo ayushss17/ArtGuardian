@@ -2,7 +2,7 @@ import  express, { Router }  from "express";
 import connection from "./Database/DB.js";
 import dotenv from 'dotenv';
 import cors from 'cors';
-import router from "./model/router.js";
+import router from "./router/router.js";
 import bodyParser from "body-parser";
 const app=express();
 
