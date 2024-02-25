@@ -5,6 +5,5 @@ import {getProducts} from "../controller/prod_control.js";
 const router = express.Router();
 
 router.post('/insert',defaultData)
-router.get('/products',getProducts)
-
+router.post('/products', getProducts);
 export default router;  

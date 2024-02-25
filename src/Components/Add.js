@@ -3,8 +3,6 @@ import { useState } from 'react'
 import { Dialog,styled, TextField,Box, Typography,Button } from '@mui/material'
 import { autheticate } from './Services/api'
 import './Add.css'
-import { Dropdown } from 'bootstrap'
-
 const Component =styled(Box)`
     height: 100vh;
     width:1000px;
@@ -39,12 +37,11 @@ const Add = ({open,setOpen}) => {
 
     const inputChng = (e) =>{
       setSignup({...signUp, [e.target.name]: e.target.value})
-      console.log(signUp)
       }
     const submit = async () =>{
       const response = await autheticate(signUp);
       if(response!=null){
-        alert("Hello")
+        alert("Data listed")
       }
     }
   return (

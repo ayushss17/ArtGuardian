@@ -6,9 +6,6 @@ const defaultData = async (request,response) => {
         const newData = new addItem(items);
         await newData.save()
         response.status(200).json({message: items})
-        if(items!=null){
-            alert("Art Submitted")
-        }
     }
     catch(error){
        response.status(500).json({message: error.message})

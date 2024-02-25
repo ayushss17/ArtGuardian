@@ -33,8 +33,7 @@ const NavBar = (disBtn,disBtn1) => {
     //Metamask wallet code
     const { ethereum } = window;
     const account = await ethereum.request({
-      method: "eth_requestAccounts"   
-         
+      method: "eth_requestAccounts"       
     }
     )
     return log;
@@ -42,9 +41,8 @@ const NavBar = (disBtn,disBtn1) => {
     const logout = () =>{
       window.localStorage.removeItem("isLogged")
     }
-    log=window.localStorage.getItem("isLogged")
-    console.log(log)
-
+    const login=window.localStorage.getItem("isLogged")
+    console.log(login)
   return (
     <div>
       <div className='NavBar'>
@@ -74,13 +72,11 @@ const NavBar = (disBtn,disBtn1) => {
         </ul>
       </div>
       <div className='buttons'>
-      { <>
-        {log===false?
-         <button onClick={()=>{template()}}>Connect TO Wallet</button>:<button className='connect'>Connected Acc: </button> }
-
-      </> 
-      }
-      </div>
+{      <>{
+  <button onClick={()=>{template()}}>Connect TO Wallet</button>
+}
+       </>
+}      </div>
          <main>
             <section id="Home"><HomeInfo /></section>
             <section id="About"><About /></section>

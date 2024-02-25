@@ -1,12 +1,17 @@
 .acc{
     background-color:  #c6f4ff;
+    top: 0;
+    position: absolute;
 }
 .buys{
-    background-color: #F8D49A;
+    background-color: #F8D49A;  
+    top: 250px;
 }
 .Sell{
     background-color: aliceblue;
+    top: 250px;
 }
+
 .acc img{
     margin-left: 50px;
     border-radius: 80%;
