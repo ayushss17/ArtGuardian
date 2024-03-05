@@ -5,7 +5,7 @@ const mockDatabase = {
         title: 'Artwork 1',
         description: 'Description for Artwork 1',
         price: 100,
-        artistAddress: '0x123456789abcdef123456789abcdef123456789a',
+        artistAddress: '0x23F1836Cde233911610ae3746Fe8a0895D6B8806',
       },
       {
         id: 2,

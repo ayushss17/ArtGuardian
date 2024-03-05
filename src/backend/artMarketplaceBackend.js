@@ -10,7 +10,7 @@ const port = 3001;
 app.use(bodyParser.json());
 
 // Replace this with the actual contract address after deployment
-const contractAddress = '0x8C1801f44bBdBaa707FA2695faB1D4852cb800dB';
+const contractAddress = '0xD2b532aE85940a989D7c7545b742aeC31be29da8';
 
 // Connect Wallet Functionality
 app.post('/connectWallet', async (req, res) => {
@@ -40,7 +40,7 @@ app.post('/connectWallet', async (req, res) => {
                 {
                     from: publicAddress,
                     to: contractAddress,
-                    data: '0x8C1801f44bBdBaa707FA2695faB1D4852cb800dB', // Replace with the actual data for your contract function
+                    data: '0xD2b532aE85940a989D7c7545b742aeC31be29da8', // Replace with the actual data for your contract function
                 },
             ],
             id: 1,
