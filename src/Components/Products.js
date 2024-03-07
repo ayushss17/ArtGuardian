@@ -12,9 +12,10 @@ const Products = ({}) => {
   const [open2,isPortOpen]=useState('none')
   const [open3,isHistOpen]=useState('none')
   const [open4,isStillOpen]=useState('none')
-  const [paintType,selectedType]=useState('Landscape')
+  const [paintType,selectedType]=useState('')
 
   useEffect(() => {
+    console.log("Products.js",paintType)
     dispatch(getProducts(paintType));
   }, [dispatch, paintType]);
 
@@ -23,7 +24,7 @@ const Products = ({}) => {
         if (val=='Landscape') {
             isLandOpen(true)
             isHistOpen('none')
-            isHistOpen('none')
+            isPortOpen('none')
             isStillOpen('none')
             selectedType('Landscape')
 
@@ -36,12 +37,12 @@ const Products = ({}) => {
             selectedType('Portrait')
            
         }
-        if (val=='History'){
+        if (val=='History Painting'){
             isHistOpen(true)
             isLandOpen('none')
             isStillOpen('none')
             isPortOpen('none')
-            selectedType('History')
+            selectedType('History Painting')
         }
         if (val=='StillLifePainting'){
             isStillOpen(true)
@@ -66,7 +67,7 @@ const Products = ({}) => {
             <h3>Select Catogory Here</h3>
             <button name="Landscape" onClick={(e)=>{Chng(e)}}>Landscapes</button>
             <button name="Portrait" onClick={(e)=>{Chng(e)}}>Portraits</button>
-            <button name="History" onClick={(e)=>{Chng(e)}}>History</button>
+            <button name="History Painting" onClick={(e)=>{Chng(e)}}>History</button>
             <button name="StillLifePainting" onClick={(e)=>{Chng(e)}}>Stills    </button>
         <div className='types'>
          <div className='Land' style={{display:open1,textAlign:'center', padding:'10px 5px'}}>
@@ -76,7 +77,7 @@ const Products = ({}) => {
         {     
              products.map(product => (
                 
-                <a><img src={product.Link1}/>
+                <a><img src={product.Link1} />
                 <Text style={{marginRight:"40px" ,fontWeight: 600,color:'#212121'}}><p id='artist'>By {product.artist}</p></Text>
                 <Text style={{display:'inline',textAlign:'center',fontSize:'25px', float:'left', marginLeft:'30px'}}><br/>
                 <p id='title'>{product.title}</p>
@@ -98,7 +99,7 @@ const Products = ({}) => {
          {     
              products.map(product => (
                 
-                <a><img src={product.Link1}/>
+                <a><img className='ports' src={product.Link1} height={400} width={200}/>
                 <Text style={{marginRight:"40px" ,fontWeight: 600,color:'#212121'}}><p id='artist'>By {product.artist}</p></Text>
                 <Text style={{display:'inline',textAlign:'center',fontSize:'25px', float:'left', marginLeft:'30px'}}><br/>
                 <p id='title'>{product.title}</p>
@@ -117,11 +118,45 @@ const Products = ({}) => {
          <h3>History Arts
             <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
          </h3>
+         {     
+             products.map(product => (
+                
+                <a><img className='ports' src={product.Link1} height={400} width={200}/>
+                <Text style={{marginRight:"40px" ,fontWeight: 600,color:'#212121'}}><p id='artist'>By {product.artist}</p></Text>
+                <Text style={{display:'inline',textAlign:'center',fontSize:'25px', float:'left', marginLeft:'30px'}}><br/>
+                <p id='title'>{product.title}</p>
+                </Text>
+                <Text style={{display:'inline',textAlign:'center',marginLeft:'50px',marginRight:'30px'}}>
+                <p id='desc'>{product.bigtitle}</p></Text>
+                <Text style={{marginRight:'40px',fontSize:'20px'}}><br/>
+                <p id='price'>Price : {product.price}</p><br/></Text>
+                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}}>BUY NOW</button>
+                <hr></hr>
+                </a>
+                
+             ))}
        </div >
        <div className='Still' style={{display:open4,textAlign:'center', padding:'10px 5px'}}>
          <h3>Still Arts
             <hr style={{marginRight:'100px',marginLeft:'100px'}}></hr>
          </h3>
+         {     
+             products.map(product => (
+                
+                <a><img className='ports' src={product.Link1} height={400} width={200}/>
+                <Text style={{marginRight:"40px" ,fontWeight: 600,color:'#212121'}}><p id='artist'>By {product.artist}</p></Text>
+                <Text style={{display:'inline',textAlign:'center',fontSize:'25px', float:'left', marginLeft:'30px'}}><br/>
+                <p id='title'>{product.title}</p>
+                </Text>
+                <Text style={{display:'inline',textAlign:'center',marginLeft:'50px',marginRight:'30px'}}>
+                <p id='desc'>{product.bigtitle}</p></Text>
+                <Text style={{marginRight:'40px',fontSize:'20px'}}><br/>
+                <p id='price'>Price : {product.price}</p><br/></Text>
+                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}}>BUY NOW</button>
+                <hr></hr>
+                </a>
+                
+             ))}
        </div >
        
        </div>

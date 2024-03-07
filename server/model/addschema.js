@@ -3,8 +3,6 @@ import mongoose from "mongoose";
 const addschema = new mongoose.Schema({
     artist: {
         type:String,
-        unique:true,
-        required:true
     },
     title: {
         type:String,

@@ -4,7 +4,8 @@ import { GET_PROD_FAILURE } from "../constants/prodConstants";
 const URL = "http://localhost:6969"
 export const getProducts = (paintType) => async (dispatch)=>{
             try{
-                const response = await axios.post(`${URL}/products`, { type: paintType });
+                const response = await axios.post(`${URL}/products`, {type:paintType});
+                console.log("getProducts.js: ",paintType)
                 dispatch({type:GET_PROD_SUCCESS,payload:response.data})
             }
             catch(error){

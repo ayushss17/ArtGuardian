@@ -9,6 +9,9 @@
     height: 100%;
     
 }
+.title h1{
+    margin-left: 60px;
+}
 html,body{
     overflow-x: hidden;
   }
@@ -16,6 +19,10 @@ html,body{
     margin-left: 100px;
     font-size: 40px;
     font-family: abthead;
+    display: inline;
+}
+.title img{
+    margin-right: 100px;
 }
 .para{
     margin-left:100px;

@@ -1,7 +1,9 @@
 .acc{
     background-color:  #c6f4ff;
     top: 0;
-    position: absolute;
+}
+body{
+    margin: 0;
 }
 .buys{
     background-color: #F8D49A;  
@@ -11,7 +13,15 @@
     background-color: aliceblue;
     top: 250px;
 }
+.ports img{
+    height: 400;
+    width: 200;
 
+}
+.Port img{
+    height: 400;
+    width: 200;
+}
 .acc img{
     margin-left: 50px;
     border-radius: 80%;
@@ -38,9 +48,7 @@
 .acc button:active{
     background-color: #c6f4ff;
 }
-.acc p{
-    
-}
+
 hr{
     line-height: 0px;
 }

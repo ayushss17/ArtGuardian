@@ -11,6 +11,8 @@ const Component =styled(Box)`
     background-image: url(../Components/Images/arts.png);
     backgroundColor: 'transparent',
         boxShadow: 'none',
+        fontFamily:'serif',
+
     
     `
  const Wrapper = styled(Box)`
@@ -50,13 +52,15 @@ const Add = ({open,setOpen}) => {
         handleclose()
       }} PaperProps={{   
     style: {
-      backgroundColor: 'transparent',
+      backgroundColor: ' #6dd5ed',
       boxShadow: 'none',
       display:'absolute',
-      overflow:'hidden'
+      overflow:'hidden',
+      fontFamily:'serif',
+      fontSize:'15px'
     },
   }}>
-      <h2 style={{ marginLeft:'30px'}}>~Add Your Art Work</h2> 
+      <h2 style={{ marginLeft:'30px',marginTop:'20px'}}>~Add Your Art Work</h2> 
         <Component>
         <Box> 
             <Wrapper justifyContent="center" > 

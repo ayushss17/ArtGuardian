@@ -25,7 +25,7 @@ const Profile = () => {
         <h2>Buys -</h2>
       </div>
       <div className='Sell'>
-<h2>Hell</h2>
+        <h2>Hell</h2>
       </div>
       <Footer />
 </>

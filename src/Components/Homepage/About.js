@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 import './HomeInfo.css';
+import getto from '../Images/gettoknow.png'
 
 const About = () => {
   return (
@@ -8,7 +9,8 @@ const About = () => {
       <div class="container-fluid  about">
         <div className='title'>
           <br /><br /><br />
-          Get To Know Us
+          <h1>Get To Know Us</h1>
+          <img src={getto} width={400} height={400} style={{float:'right'}}></img>
         </div>
         <br /><br />
         <div className='para'>

@@ -80,7 +80,7 @@ const NavBar = (disBtn,disBtn1) => {
          <main>
             <section id="Home"><HomeInfo /></section>
             <section id="About"><About /></section>
-            <section id="Why"><Why /></section>
+            <section id="Why"><Why/></section>
             <section id="Footer"><Footer /></section>
           </main>
     </div>
