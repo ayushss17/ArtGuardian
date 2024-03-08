@@ -186,7 +186,20 @@ hr{
     font-family: btn-buy;
     font-size: 25px;
 }
+
+.Land button{
+    border-radius: 50px 0px 0px 50px;
+
+}
 .Hist button{
+    border-radius: 50px 0px 0px 50px;
+
+}
+.Port button{
+    border-radius: 50px 0px 0px 50px;
+
+}
+.Land button{
     border-radius: 50px 0px 0px 50px;
 
 }

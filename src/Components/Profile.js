@@ -16,7 +16,7 @@ const Profile = () => {
         {open ? console.log("Hell") :
           <p>
             <h1>Hello,</h1>
-            <h4>Ayush Sawant</h4>
+            <h6>0xD63397814D82F0580b09276AcCC110781913d939</h6>
           </p>
         }<button onClick={() => { openDial() }}>Add a New ART</button>
         <Add open={open} setOpen={setOpen}></Add>
@@ -25,7 +25,7 @@ const Profile = () => {
         <h2>Buys -</h2>
       </div>
       <div className='Sell'>
-        <h2>Hell</h2>
+        <h2>Sells -</h2>
       </div>
       <Footer />
 </>
