@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Dialog,styled, TextField,Box, Typography,Button } from '@mui/material'
-import { autheticate } from './Services/api'
+import { autheticate } from '../Services/api'
 import './Add.css'
-import { MetamaskContext } from './NavigationBar/MetaMaskContext';
+import { MetamaskContext } from '../NavigationBar/MetaMaskContext';
 
 
 
@@ -56,7 +56,8 @@ const Component =styled(Box)`
         const response = await autheticate(signUp);
         console.log(signUp)
         if(response!=null){
-          alert("Painting Listed by artist: "+metamaskAccount)
+          alert("Painting Listed by artist: "+metamaskAccount
+          )
         }
       }
   return (

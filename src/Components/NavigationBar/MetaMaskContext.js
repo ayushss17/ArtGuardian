@@ -1,5 +1,4 @@
-// MetamaskContext.js
-import React, { createContext, useState, useEffect } from 'react';
+import React ,{createContext, useState, useEffect } from 'react';
 
 const MetamaskContext = createContext();
 
@@ -75,4 +74,5 @@ const MetamaskProvider = ({ children }) => {
   );
 };
 
-export { MetamaskProvider, MetamaskContext };
+export  {MetamaskContext,MetamaskProvider};
+ 

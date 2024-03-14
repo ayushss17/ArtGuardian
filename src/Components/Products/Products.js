@@ -1,16 +1,28 @@
 import React, { useState,useRef, useEffect, } from 'react'
 import './Products.css'
 import { Button, Typography,createTheme,private_excludeVariablesFromRoot,styled } from '@mui/material'
-import {getProducts} from './redux/actions/getProducts.js'
+import {getProducts} from '../redux/actions/getProducts.js'
 import { useDispatch ,useSelector} from 'react-redux';
 import Add from './Add.js';
 import { useContext } from 'react';
-import { MetamaskContext } from './NavigationBar/MetaMaskContext.js';
+import { MetamaskContext } from '../NavigationBar/MetaMaskContext.js';
+import Buy from '../Products/Buy.js'
 const Products = ({}) => {
 
   const {isMetamaskConnected, metamaskAccount}=useContext(MetamaskContext);
+  const [openWin, setOpenBuy] = useState('none');
+  const [data,setData]=useState('none');
+  const openBuyDial = ({product}) => {
+    setOpenBuy(true);
+    setData(product);
+    console.log(data);
+  };
+
+ 
   
   const dispatch = useDispatch();
+
+  
 
   const [open1,isLandOpen]=useState('none')
   const [open2,isPortOpen]=useState('none')
@@ -63,6 +75,8 @@ const Products = ({}) => {
       `
      const {products}=useSelector(state =>  state.getProducts)
      const [open, setOpen] = useState(false);
+     
+     
    
      const openDial = () => {
        setOpen(true);
@@ -173,16 +187,20 @@ const Products = ({}) => {
                 <p id='desc'>{product.bigtitle}</p></Text>
                 <Text style={{marginRight:'40px',fontSize:'20px'}}><br/>
                 <p id='price'>Price : {product.price}</p><br/></Text>
-                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}}>BUY NOW</button>
+                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}} onClick={()=>{
+                  openBuyDial({product})
+                  
+                }}>BUY NOW</button>
                 <hr></hr>
                 </a>
                 
              ))}
+
        </div >
-       
+       <Buy open={openWin} setOpen={setOpenBuy} product={data}/>
+
        </div>
        </div>
-}
        </>
       
   )

@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import Add from './Add';
 import './Profile.css';
-import prof from '../Components/Images/flower1.jpg';
-import Footer from './Homepage/footer';
-import { MetamaskContext } from './NavigationBar/MetaMaskContext';
+import prof from '../Images/flower1.jpg'
+import Footer from '../Homepage/footer';
+import { MetamaskContext } from '../NavigationBar/MetaMaskContext';
 const Profile = () => {
   const [open, setOpen] = useState(false);
   const openDial = () => {

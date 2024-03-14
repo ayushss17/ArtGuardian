@@ -1,0 +1,12 @@
+.BuyWindow div{
+    height: 300;
+    width: 300;
+    align-items: inlin;
+    justify-content: safe;
+}
+.Window button{
+    height: 300;
+}
+.BuyWindow .Window button{
+    width: 1000;
+}
