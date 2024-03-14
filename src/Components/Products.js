@@ -3,11 +3,15 @@ import './Products.css'
 import { Button, Typography,createTheme,private_excludeVariablesFromRoot,styled } from '@mui/material'
 import {getProducts} from './redux/actions/getProducts.js'
 import { useDispatch ,useSelector} from 'react-redux';
-import { Dispatch } from 'redux';
+import Add from './Add.js';
+import { useContext } from 'react';
+import { MetamaskContext } from './NavigationBar/MetaMaskContext.js';
 const Products = ({}) => {
+
+  const {isMetamaskConnected, metamaskAccount}=useContext(MetamaskContext);
+  
   const dispatch = useDispatch();
 
-  
   const [open1,isLandOpen]=useState('none')
   const [open2,isPortOpen]=useState('none')
   const [open3,isHistOpen]=useState('none')
@@ -58,11 +62,28 @@ const Products = ({}) => {
         display: flex;
       `
      const {products}=useSelector(state =>  state.getProducts)
-      
+     const [open, setOpen] = useState(false);
+   
+     const openDial = () => {
+       setOpen(true);
+     };
 
         
   return ( 
     <>
+        <>
+        if ({open1==null && open2==null && open3==null && open4==null}) {
+          
+          <div>
+          {
+          isMetamaskConnected?<> <button onClick={openDial} style={{marginTop:300}}>Add a New ART</button>
+          <Add open={open} setOpen={setOpen} /> </>:<h3 style={{marginTop:300}}>Connect to account please</h3>
+        }          </div>
+          } 
+          </>
+          
+
+        
         <div className='typeP'>
             <h3>Select Catogory Here</h3>
             <button name="Landscape" onClick={(e)=>{Chng(e)}}>Landscapes</button>
@@ -161,7 +182,7 @@ const Products = ({}) => {
        
        </div>
        </div>
-      
+}
        </>
       
   )

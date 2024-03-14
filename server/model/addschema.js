@@ -1,8 +1,13 @@
 import mongoose from "mongoose";
 
 const addschema = new mongoose.Schema({
+    artistaddress: {
+        type:String,
+        required:true
+    },
     artist: {
         type:String,
+        unique:false
     },
     title: {
         type:String,

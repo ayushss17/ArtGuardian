@@ -215,4 +215,5 @@ const mockDatabase = {
     ],
   };
   
+  export default mockDatabase
   

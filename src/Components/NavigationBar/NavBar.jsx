@@ -1,55 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState,  } from 'react';
 import './NavBar.css'
 import logo from '../Images/art.png'
+import { Link } from 'react-router-dom';
 import HomeInfo from '../Homepage/HomeInfo';
 import About from '../Homepage/About';
 import Why from '../Homepage/why';
 import Footer from '../Homepage/footer';
-import { Link } from 'react-router-dom';
-const initialAccount = {
-  login: {
-    view: 'connected to wallet'
-  },
-  signup: {
-    view: 'not connnected to wallet'
-  }
-}
+import { MetamaskContext } from './MetaMaskContext';
 
+const NavBar = () => {
+  const {isMetamaskConnected, connectToMetamask, metamaskAccount,disconnectFromMetamask}=useContext(MetamaskContext);
 
-
-const NavBar = (disBtn,disBtn1) => {
-  const [accounts, toggleB] = useState(initialAccount.signup)
-  const [state, setState] = useState({
-    provider: null,
-    signer: null,
-    contractor: null
-  });
-  var log;
-  const template = async () => {
-    window.localStorage.setItem("isLogged",true)
-    const contractAddress = "";
-    const contractABI = "";
-    //Metamask wallet code
-    const { ethereum } = window;
-    const account = await ethereum.request({
-      method: "eth_requestAccounts"       
-    }
-    )
-    return log;
-   }
-    const logout = () =>{
-      window.localStorage.removeItem("isLogged")
-    }
-    const login=window.localStorage.getItem("isLogged")
-    console.log(login)
-  return (
+    return (
+    
     <div>
       <div className='NavBar'>
         <ul className='header'>
           <li>
             <a href='#Home'>
-              <img src={logo} height="50" width="200" onClick={() =>{logout()}}></img>
+              <img src={logo} height="50" width="200"></img>
             </a>
           </li>
         </ul>
@@ -72,9 +42,12 @@ const NavBar = (disBtn,disBtn1) => {
         </ul>
       </div>
       <div className='buttons'>
-{      <>{
-  <button onClick={()=>{template()}}>Connect TO Wallet</button>
-}
+{      <>{isMetamaskConnected ? (
+        <button onClick={disconnectFromMetamask}>Disconnect</button>
+      ) : (
+        <button onClick={connectToMetamask}>Connect to Wallet</button>
+      )}
+      {isMetamaskConnected && <p>Connected Account: {metamaskAccount}</p>}
        </>
 }      </div>
          <main>

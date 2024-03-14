@@ -1,26 +1,40 @@
-import React from 'react'
-import Footer from './Homepage/footer'
-import './Profile.css'
-import prof from '../Components/Images/flower1.jpg'
-import Add from './Add'
-import { useState } from 'react'
+import React, { useContext, useState } from 'react';
+import Add from './Add';
+import './Profile.css';
+import prof from '../Components/Images/flower1.jpg';
+import Footer from './Homepage/footer';
+import { MetamaskContext } from './NavigationBar/MetaMaskContext';
 const Profile = () => {
   const [open, setOpen] = useState(false);
   const openDial = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
+const {isMetamaskConnected, metamaskAccount}=useContext(MetamaskContext);
   return (
     <>
-      <div className='acc'>
-        <img src={prof} height="200" width="200" alt='No Profile'></img>
-        {open ? console.log("Hell") :
-          <p>
-            <h1>Hello,</h1>
-            <h6>0xD63397814D82F0580b09276AcCC110781913d939</h6>
-          </p>
-        }<button onClick={() => { openDial() }}>Add a New ART</button>
-        <Add open={open} setOpen={setOpen}></Add>
+      <div className='acc' style={{height:200}}>
+        {!open && (
+          <>
+            {isMetamaskConnected ? (
+        metamaskAccount ? (
+          <>           
+           <h1>Hello,</h1>
+           <button onClick={openDial}>Drop your ARTS</button>
+
+           <p style={{float:'left' ,marginLeft:'500', textAlign:'center', fontSize:23}}>Metamask Account Number: {metamaskAccount}</p>
+          </>  
+        ) : (
+          <p>Metamask account loading...</p>
+        )
+      ) : (
+        <p style={{float:'left' ,marginLeft:'500', textAlign:'center', fontSize:23}}>Please connect to Metamask to view your account number</p>
+      )}          </>
+        )}
+              <Add open={open} setOpen={setOpen}/>
+
       </div>
+     
+      
       <div className='buys'>
         <h2>Buys -</h2>
       </div>
@@ -28,9 +42,8 @@ const Profile = () => {
         <h2>Sells -</h2>
       </div>
       <Footer />
-</>
-      
-  )
-}
+    </>
+  );
+};
 
-export default Profile
+export default Profile;

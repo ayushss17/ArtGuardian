@@ -1,6 +1,7 @@
 .acc{
     background-color:  #c6f4ff;
     top: 0;
+    height: 900;
 }
 body{
     margin: 0;
@@ -37,8 +38,7 @@ body{
     height: 50px;
     width: 200px;
     background-color: #e8a87c;
-    margin-top: 85px;
-    margin-left: 950px;
+    margin-left: 1250px;
     position: fixed;
     font-family: NavItem;
     float: right;

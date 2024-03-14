@@ -1,7 +1,6 @@
-
 const express = require('express');
 const bodyParser = require('body-parser');
-const mockDatabase = require('./mockdatabase'); // Ensure the correct path
+const mockDatabase=require('./mockdatabase');
 const axios = require('axios');
 
 const app = express();
