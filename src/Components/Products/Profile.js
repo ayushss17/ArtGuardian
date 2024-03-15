@@ -1,15 +1,28 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Add from './Add';
 import './Profile.css';
 import prof from '../Images/flower1.jpg'
 import Footer from '../Homepage/footer';
 import { MetamaskContext } from '../NavigationBar/MetaMaskContext';
+import { GetuserProduct } from '../Services/GetuserProduct';
+import { UseDispatch, useDispatch } from 'react-redux';
+
 const Profile = () => {
   const [open, setOpen] = useState(false);
+  const {isMetamaskConnected, metamaskAccount}=useContext(MetamaskContext);
+  const dispatch=useDispatch();
+
   const openDial = () => {
     setOpen(true);
   };
-const {isMetamaskConnected, metamaskAccount}=useContext(MetamaskContext);
+  // useEffect(() => {
+  //   console.log(metamaskAccount)
+  //   dispatch(getUserProducts(metamaskAccount));
+  // }, [dispatch, metamaskAccount]);
+  // console.log(metamaskAccount)
+
+
+
   return (
     <>
       <div className='acc' style={{height:200}}>
