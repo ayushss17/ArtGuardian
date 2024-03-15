@@ -9,7 +9,6 @@ const defaultData = async (request,response) => {
         const title=items.title;
         const bigtitle=items.bigtitle;
         const price=items.price;
-        // Simulate creating a new art listing in the mock database
         const newArt = {
         id: mockDatabase.arts.length + 1,
         title,
@@ -18,8 +17,7 @@ const defaultData = async (request,response) => {
         artistAddress: 123,
         };  
         mockDatabase.arts.push(newArt);
-        
-        console.log(mockDatabase); // Display mock database for verification
+        console.log(mockDatabase); 
         response.status(200).json({message: items})
 
     }
