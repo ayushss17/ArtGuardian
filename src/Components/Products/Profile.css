@@ -13,6 +13,7 @@ body{
 .Sell{
     background-color: aliceblue;
     top: 250px;
+    height: 350px;
 }
 .ports img{
     height: 400;
@@ -54,9 +55,20 @@ hr{
 }
 .buys{
     line-height: 0px;
+    height: 350px;
 }
 .buys h2{
     margin-bottom: 150px;
+}
+.buys img{
+    display: inline-block;
+    margin-top: 0;
+    padding: 10px;
+    height: 275px;
+    width: 400px;
+    background:whitesmoke;
+    border-radius: 10px;
+    margin:10px 10px 10px 10px;
 }
 .Sell h2{
     margin-bottom: 150px;

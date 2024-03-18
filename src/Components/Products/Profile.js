@@ -4,25 +4,24 @@ import './Profile.css';
 import prof from '../Images/flower1.jpg'
 import Footer from '../Homepage/footer';
 import { MetamaskContext } from '../NavigationBar/MetaMaskContext';
-import { GetuserProduct } from '../Services/GetuserProduct';
-import { UseDispatch, useDispatch } from 'react-redux';
-
+import { UseDispatch, useDispatch,useSelector } from 'react-redux';
+import { getUserProducts } from '../redux/actions/getUserProducts.js';
 const Profile = () => {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+
   const {isMetamaskConnected, metamaskAccount}=useContext(MetamaskContext);
-  const dispatch=useDispatch();
+  useEffect(() => {
+    if (metamaskAccount) {
+      dispatch(getUserProducts(metamaskAccount));
+    }
+  }, [dispatch, metamaskAccount]);
 
   const openDial = () => {
     setOpen(true);
   };
-  // useEffect(() => {
-  //   console.log(metamaskAccount)
-  //   dispatch(getUserProducts(metamaskAccount));
-  // }, [dispatch, metamaskAccount]);
-  // console.log(metamaskAccount)
-
-
-
+  const {products} = useSelector(state => state.getProducts);
+  console.log(products)
   return (
     <>
       <div className='acc' style={{height:200}}>
@@ -33,7 +32,6 @@ const Profile = () => {
           <>           
            <h1>Hello,</h1>
            <button onClick={openDial}>Drop your ARTS</button>
-
            <p style={{float:'left' ,marginLeft:'500', textAlign:'center', fontSize:23}}>Metamask Account Number: {metamaskAccount}</p>
           </>  
         ) : (
@@ -49,7 +47,12 @@ const Profile = () => {
      
       
       <div className='buys'>
-        <h2>Buys -</h2>
+          <h3>Buys- </h3>
+          {
+          products.map(product =>(
+           <img src={product.Link1}></img> 
+          ))
+          } 
       </div>
       <div className='Sell'>
         <h2>Sells -</h2>

@@ -44,7 +44,7 @@ const Buy = ({open,setOpen,product}) => {
           </div>
           <h4 style={{ fontSize:15,marginLeft:20}}>Current Owner Address:<h4 style={{fontFamily:'fantasy',fontSize:15}}>{product.artistaddress}</h4></h4>
           <button className='buy-btn' value="Hello" style={{margin:10,float:'right',borderRadius:15,height:30,width:100}} onClick={sendData}>BUY</button>
-          <button value="Hello" style={{margin:10,float:'right',borderRadius:15,height:30,width:100}}>CANCEL</button>
+          <button value="Hello" style={{margin:10,float:'right',borderRadius:15,height:30,width:100}} onClick={handleclose}>CANCEL</button>
           </div>
           
           

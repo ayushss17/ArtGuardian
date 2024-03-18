@@ -10,7 +10,7 @@ import Buy from '../Products/Buy.js'
 const Products = ({}) => {
 
   const {isMetamaskConnected, metamaskAccount}=useContext(MetamaskContext);
-  const [openWin, setOpenBuy] = useState('none');
+  const [openWin, setOpenBuy] = useState();
   const [data,setData]=useState('none');
   const openBuyDial = ({product}) => {
     setOpenBuy(true);
@@ -75,8 +75,7 @@ const Products = ({}) => {
       `
      const {products}=useSelector(state =>  state.getProducts)
      const [open, setOpen] = useState(false);
-     
-     
+  
    
      const openDial = () => {
        setOpen(true);
