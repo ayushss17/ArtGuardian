@@ -120,7 +120,10 @@ const Products = ({}) => {
                 <p id='desc'>{product.bigtitle}</p></Text>
                 <Text style={{marginRight:'40px',fontSize:'20px'}}><br/>
                 <p id='price'>Price : {product.price}</p><br/></Text>
-                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}}>BUY NOW</button>
+                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}} onClick={()=>{
+                  openBuyDial({product})
+                  
+                }}>BUY NOW</button>
                 <hr></hr>
                 </a>
                 
@@ -142,7 +145,10 @@ const Products = ({}) => {
                 <p id='desc'>{product.bigtitle}</p></Text>
                 <Text style={{marginRight:'40px',fontSize:'20px'}}><br/>
                 <p id='price'>Price : {product.price}</p><br/></Text>
-                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}}>BUY NOW</button>
+                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}} onClick={()=>{
+                  openBuyDial({product})
+                  
+                }}>BUY NOW</button>
                 <hr></hr>
                 </a>
                 
@@ -164,7 +170,10 @@ const Products = ({}) => {
                 <p id='desc'>{product.bigtitle}</p></Text>
                 <Text style={{marginRight:'40px',fontSize:'20px'}}><br/>
                 <p id='price'>Price : {product.price}</p><br/></Text>
-                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}}>BUY NOW</button>
+                <br/><button style={{marginTop:'70px',marginBottom:'10px',marginLeft:'180px'}} onClick={()=>{
+                  openBuyDial({product})
+                  
+                }}>BUY NOW</button>
                 <hr></hr>
                 </a>
                 
