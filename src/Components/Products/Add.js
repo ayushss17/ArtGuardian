@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Dialog,styled, TextField,Box, Typography,Button } from '@mui/material'
 import { autheticate } from '../Services/api'
 import './Add.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { MetamaskContext } from '../NavigationBar/MetaMaskContext';
 
 

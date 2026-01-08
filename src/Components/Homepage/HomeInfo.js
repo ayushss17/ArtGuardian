@@ -4,20 +4,26 @@ import Buy from '../Images/buy.png'
 import Sell from '../Images/sell.png'
 import user from '../Images/user.png'
 import cat from '../Images/catogories.png'
+import 'aos/dist/aos.css';
+import { useEffect } from 'react'
+import AOS from 'aos'
 const HomeInfo = () => {
+  useEffect(()=>{
+    AOS.init();
+  })
   return (
     <div>
       <div className='container-fluid home'>
         <center>
           <br /><br /><br /><br /><br />
-          <h4 className='Main'>Welcome to ArtGuardian !</h4>
+          <h4 className='Main' >Welcome to ArtGuardian !</h4>
           <br /><br /><br />
           <img className="images" src={user} width='150' height='150'></img>
           <img className="images" src={cat} width='150' height='150'></img>
           <img className="images" src={Sell} width='150' height='150'></img>
           <img className="images" src={Buy} width='150' height='150'></img>
 
-          <h3 className='head'>Your Trustworthy Partner</h3>
+          <h3 className='head' data-aos="zoom-in-down">Your Trustworthy Partner</h3>
 
           <h3 className='head1'>Ensuring authenticity and peace of mind</h3>
           <h3 className='head1'>for art enthusiasts and collectors.</h3>

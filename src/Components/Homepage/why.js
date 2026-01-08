@@ -24,5 +24,4 @@ const why = () => {
     </div>
   )
 }
-
 export default why
